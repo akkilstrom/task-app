@@ -1,12 +1,12 @@
 
-##Task-App
+## Task-App
 
-##Dependencies
+## Dependencies
 - php 7+
 - Composer
 - Node.js + npm
 
-##Setup
+## Setup
 - Clone repo
 - Install dependencies: composer install && npm install
 - Setup dev environment. Homestead is recommended.
