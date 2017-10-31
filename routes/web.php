@@ -26,6 +26,9 @@ Route::get('/cards/{card}', 'CardsController@show');
 
 Route::post('/cards/{card}/comments', 'CommentsController@store');
 
+Route::get('/cards/tags/{tag}', 'TagsController@index');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

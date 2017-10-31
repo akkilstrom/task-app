@@ -42,7 +42,7 @@
         {{--  linkedin  --}}
         <div class="form-group">
             <label for="linkedin">Linkedin profile</label>
-            <input type="url" class="form-control" id="linkedin" name="linkedin">
+            <input type="text" class="form-control" id="linkedin" name="linkedin">
         </div>
 
         <div class="form-group">

@@ -52,6 +52,8 @@ class CardsController extends Controller
         auth()->user()->publish(
             new Card(request(['task', 'description', 'importance', 'deadline']))
         );
+
+        session()->flash( 'message', 'Your card has been added.' );
         
         //Creates a new card using the request data & saves it to the database
         // Card::create([

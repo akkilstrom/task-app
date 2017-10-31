@@ -50,7 +50,7 @@ class EmployeesController extends Controller
         // $Employee = new Employee();
 
         // $Employee->email = $email;
-
+        session()->flash( 'message', 'The employee has been added.' );
         return redirect( '/employees' );
     }
 }

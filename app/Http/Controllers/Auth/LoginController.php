@@ -32,8 +32,7 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         // Adding a guest filter - only guests are alowed to make it through that 
         // ...filter, if authenticatd user you don't get to access any of this
         $this->middleware('guest')->except('logout');

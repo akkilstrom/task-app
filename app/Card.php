@@ -38,4 +38,11 @@ class Card extends Model
             ->get()
             ->toArray();
     }
+
+    // Method that sets up a many to many relationship
+    // 1 card may have many tags
+    // Any tag may be applied to many posts
+    public function tags() {
+        return $this->belongsToMany(Tag::class);
+    }
 }

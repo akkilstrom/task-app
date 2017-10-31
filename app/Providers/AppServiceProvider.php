@@ -21,6 +21,10 @@ class AppServiceProvider extends ServiceProvider
 
             // add a variable and makes it equal to archives on \App\Card
             $view->with( 'archives', \App\Card::archives() );
+            
+            // add the tag as long as they have a card associated with them
+            $view->with( 'tags', \App\Tag::has('cards')->pluck('name') );
+
         });
     }
 
