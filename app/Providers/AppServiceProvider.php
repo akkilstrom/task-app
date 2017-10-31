@@ -18,13 +18,11 @@ class AppServiceProvider extends ServiceProvider
         // Listen for  when the layouts. sidebar is loaded & then register a.. 
         // callback function where we can bind anything to that view
         view()->composer('layouts.sidebar', function($view) {
+            $archives = \App\Card::archives();
+            $tags = \App\Tag::has('cards')->pluck('name');
 
-            // add a variable and makes it equal to archives on \App\Card
-            $view->with( 'archives', \App\Card::archives() );
-            
-            // add the tag as long as they have a card associated with them
-            $view->with( 'tags', \App\Tag::has('cards')->pluck('name') );
-
+            // Adds the archive & tags (if they are associated with a card) 
+            $view->with( compact('archives', 'tags') );
         });
     }
 

@@ -13,8 +13,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+        // The listener is good to reach for when you want to fire many things 
+        // in response to this event
+        'App\Events\ThreadCreated' => [
+            'App\Listeners\NotifySubscribers',
+            'App\Listeners\CheckForSpam'
         ],
     ];
 
