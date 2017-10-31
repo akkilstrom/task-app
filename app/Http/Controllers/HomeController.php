@@ -23,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        return session( 'message' );
         return view('home');
     }
 }

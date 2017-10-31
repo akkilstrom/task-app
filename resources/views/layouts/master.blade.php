@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-sm-8 blog-main">
             @include( 'layouts.error' )
+            @include( 'layouts.success' )
             @yield( 'content' )
         </div>
 
