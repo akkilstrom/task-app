@@ -1,6 +1,6 @@
 @include( 'layouts.header' )
 
-<main role="main" class="container">
+<main role="main" class="container" id="app">
 
     <div class="row">
         <div class="col-sm-8 blog-main">
