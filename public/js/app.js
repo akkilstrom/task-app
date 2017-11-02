@@ -42740,7 +42740,7 @@ if (false) {
 /* 42 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n    color: $text-color;\n          ^\n      Undefined variable: \"$text-color\".\n      in /Users/anna.kihlstrom/Documents/Code/exam/resources/assets/sass/_base.scss (line 5, column 12)\n    at runLoaders (/Users/anna.kihlstrom/Documents/Code/exam/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/anna.kihlstrom/Documents/Code/exam/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/anna.kihlstrom/Documents/Code/exam/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/anna.kihlstrom/Documents/Code/exam/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/anna.kihlstrom/Documents/Code/exam/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/anna.kihlstrom/Documents/Code/exam/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Users/anna.kihlstrom/Documents/Code/exam/node_modules/async/dist/async.js:906:16)\n    at options.error (/Users/anna.kihlstrom/Documents/Code/exam/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);
