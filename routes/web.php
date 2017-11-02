@@ -13,6 +13,7 @@
 
 
 Route::get('/', function () { return view('welcome'); });
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/employees', 'EmployeesController@index');
 Route::get('/employees/create', 'EmployeesController@create');
@@ -24,11 +25,11 @@ Route::get('/cards/create', 'CardsController@create');
 Route::post('/cards', 'CardsController@store');
 Route::get('/cards/{card}', 'CardsController@show');
 
-Route::post('/cards/{card}/comments', 'CommentsController@store');
-
 Route::get('/cards/tags/{tag}', 'TagsController@index');
-
+Route::post('/cards/{card}/comments', 'CommentsController@store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Middleware to make sure that you have to login to visit certain pages
+//Route::group(['middleware' => 'auth'], function() {
+//});

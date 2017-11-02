@@ -2,9 +2,10 @@
 
 namespace App;
 use Carbon\Carbon;
+use App\Comment;
 
-class Card extends Model
-{
+class Card extends Model {
+    
     public function comments() {
         return $this->hasMany(Comment::class);
     }
@@ -13,9 +14,8 @@ class Card extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function addComment($body) {
-        
-        $this->comments()->create(compact('body'));
+    public function addComment($body, $user_id) {
+        $this->comments()->create(compact('body', 'user_id'));
     }
 
     // When this method is called we give it a list of filters

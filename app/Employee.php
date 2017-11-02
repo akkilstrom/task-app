@@ -2,8 +2,7 @@
 
 namespace App;
 
-class Employee extends Model
-{
+class Employee extends Model {
     //instead of public static function isVisible() use queryscopes
     //public function scopeIsVisible( $query ) {
         

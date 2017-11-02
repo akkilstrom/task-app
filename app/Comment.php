@@ -2,8 +2,8 @@
 
 namespace App;
 
-class Comment extends Model
-{
+class Comment extends Model {
+    
     public function card() {
         return $this->belongsTo(Card::class);
     }
@@ -12,3 +12,5 @@ class Comment extends Model
         return $this->belongsTo(User::class);
     }
 }
+
+
