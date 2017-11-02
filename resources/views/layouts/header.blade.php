@@ -13,10 +13,10 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>The House app</title>
+        <title>The Company Forum</title>
 
         <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">  --}}
 
         <!-- Custom styles for this template -->
         <link href="{{ url('/') }}/css/app.css" rel="stylesheet">
@@ -56,7 +56,7 @@
 
             <div class="blog-header">
                 <div class="container">
-                    <h1 class="blog-title">The House forum</h1>
+                    <h1 class="blog-title">The Company forum</h1>
                     <p class="lead blog-description">Here you find contact details 
                         of your colleagues and task board.
                     </p>
