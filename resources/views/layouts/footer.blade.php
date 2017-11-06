@@ -1,11 +1,29 @@
-    <footer class="blog-footer">
-        <p>Got to House Agency's webpage 
-            <a href="http://houseagency.se/">http://houseagency.se/</a> 
-            or visit our facebook page <a href="#">Facebook</a>.
-        </p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
+    <footer>
+        <div class="footer-module">
+            <div class="footer-item">
+                <h3>The xxx CMS</h3>
+            </div>
+            <div class="footer-item">
+                <h4>Elsewhere</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ol>
+            </div>
+            <div class="footer-item">
+                <h4>Navigation</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Models</a></li>
+                    <li><a href="#">Content</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="footer-module">
+            <p><a href="#">Back to top</a></p>
+        </div>
+        
     </footer>
 
     <!-- Bootstrap core JavaScript
