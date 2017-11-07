@@ -487,7 +487,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 300;
-  color: #222;
+  color: #474c4f;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -506,6 +506,7 @@ h2 {
 
 a,
 .nav-link {
+  color: #474c4f;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -614,6 +615,10 @@ header .header-content nav a {
   text-align: center;
 }
 
+header .header-content nav a:hover {
+  color: orange;
+}
+
 header .header-content nav .fa {
   font-size: 2rem;
 }
@@ -622,6 +627,19 @@ main {
   width: 90%;
   border: 1px dotted blue;
   padding: 10rem 0 15rem;
+}
+
+.success-container,
+.error-container {
+  font-size: 1.6rem;
+}
+
+.success-container {
+  color: #2ab27b;
+}
+
+.error-container {
+  color: #bf5329;
 }
 
 .task-card {

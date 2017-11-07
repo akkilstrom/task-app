@@ -9,7 +9,7 @@
             @yield( 'content' )
         </div>
 
-        @include( 'layouts.sidebar' )
+        {{--  @include( 'layouts.sidebar' )  --}}
     </div><!-- /.row -->
 
 </main><!-- /.container -->

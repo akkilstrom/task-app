@@ -7,10 +7,9 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Registration confirmation</title>
-
     </head>
     <body>
-        <h1>Welcome to the House forum {{ $user->name }}</h1>
+        <h1>Welcome to The Taskboard admin {{ $user->name }}</h1>
 
         {{--  Dont forget to change mail from in the config > mail file  --}}
     </body>

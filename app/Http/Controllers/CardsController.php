@@ -13,7 +13,6 @@ class CardsController extends Controller
     }
 
     public function index() {
-
         if (request(['month', 'year'])) {
             $cards = Card::latest()
                 ->filter(request(['month', 'year']))
@@ -24,7 +23,6 @@ class CardsController extends Controller
         }
 
         $archives = Card::archives();
-
         return view( 'cards.index', compact('cards') );
     }
 

@@ -1,5 +1,5 @@
 @if( $flash = session('message') )
-    <div class="alert alert-success">
+    <div class="success-container">
         {{ $flash }}
     </div>
 @endif

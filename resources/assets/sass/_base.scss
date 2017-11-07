@@ -22,6 +22,7 @@ h1, h2 {
 }
 
 a, .nav-link {
+    color: $text-color-body;
     text-decoration: none;
     margin: 0;
     padding: 0;
@@ -86,6 +87,10 @@ header {
             a {
                 color: white;
                 text-align: center;
+
+                &:hover {
+                    color: orange;
+                }
             }
 
             .fa {
@@ -100,6 +105,18 @@ main {
     // max-width: 1200px;
     border: 1px dotted blue;
     padding: 10rem 0 15rem;
+}
+
+.success-container, .error-container {
+    font-size: 1.6rem;
+}
+
+.success-container {
+    color: #2ab27b;
+}
+
+.error-container {
+    color: #bf5329;
 }
 
 .task-card {

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Dashboard</h1>
+    <h1>Dashboard, {{ Auth::user()->name }}</h1>
     {{--  @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}
