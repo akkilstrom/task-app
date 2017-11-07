@@ -1,3 +1,6 @@
+/*------------------------------------------------------------------------------
+    BASE
+------------------------------------------------------------------------------*/
 body {
     display: flex;
     flex-flow: column wrap;
@@ -10,89 +13,139 @@ body {
     box-sizing: border-box;
 }
 
-a {
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-weight: lighter;
+}
+
+a, .nav-link {
     text-decoration: none;
     margin: 0;
     padding: 0;
+
+    &:hover {
+        color: orange;
+    }
 }
 
-ol {
+.list-unstyled {
     margin: 0;
-    padding-left: 1rem;
+    padding-left: 0;
 }
 
+hr {
+    border: 0.5px solid #939292;
+}
+/*------------------------------------------------------------------------------
+    HEADER BLADE
+------------------------------------------------------------------------------*/
 header {
+    position: fixed;
     width: 100%;
-    height: 4rem;
+    height: 6rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    // border: 1px dotted red;
     background-color: black;
     color: white;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+
+    .header-content {
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+        .logo-container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            flex-grow: 1;
+            // border: 2px solid green;
     
-    .logo-container {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        flex-grow: 1;
-        // border: 2px solid green;
-
-        .logo {
-            margin: 0;
+            .logo {
+                margin: 0;
+                font-family: $font-family-logo;
+                letter-spacing: 0.1rem;
+            }
         }
-    }
+    
+        nav {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: space-between;
+            // border: 1px dotted blue;
+            flex-grow: 2;
+    
+            a {
+                color: white;
+                text-align: center;
+            }
 
-    nav {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        align-content: space-between;
-        // border: 1px dotted blue;
-        flex-grow: 2;
-
-        a {
-            color: white;
+            .fa {
+                font-size: 2rem;
+            }
         }
-    }
+    } 
 }
 
 main {
     width: 90%;
+    // max-width: 1200px;
     border: 1px dotted blue;
+    padding: 10rem 0 15rem;
 }
 
+.task-card {
+    background-color: orange;
+    max-width: 30rem;
+    padding: 0.3rem 1rem 1rem 1rem;
+    border-radius: .25rem;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+}
+
+/*------------------------------------------------------------------------------
+    FOOTER BLADE
+------------------------------------------------------------------------------*/
 footer {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: center;
     align-content: center;
     width: 100%;
     background-color: black;
     bottom: 0;
     color: white;
 
-    .footer-module {
+    .footer-item {
+        padding-top: 0.8rem;
+        text-align: center;
         width: 90%;
-
-        .footer-item {
-            flex-grow: 1;
-        }
     }
 
-    h4 {
-        padding: 0;
-        margin: 0;
+    .footer-item:last-child {
+        padding-bottom: 2rem;
+    }
+
+    h3, h4  {
+        // padding: 0;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-family: $font-family-logo;
+        letter-spacing: 0.1rem;
     }
 
     a {
         color: white;
-    }
-
-    ol {
-        list-style: none;
-        padding: 0;
     }
 }

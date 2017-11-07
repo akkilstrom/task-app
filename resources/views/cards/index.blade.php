@@ -1,6 +1,7 @@
 @extends( 'layouts.master' )
 
 @section( 'content' )
+    <h1>Tasks</h1>
     @foreach( $cards as $card )
         @include( 'cards.card' )
     @endforeach

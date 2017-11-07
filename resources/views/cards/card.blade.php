@@ -1,5 +1,5 @@
-<div class="blog-post">
-    <h2 class="blog-post-title">
+<article class="task-card">
+    <h2>
         <a href="/cards/{{ $card->id }}">{{ $card->task }}</a>
     </h2>
     <p class="blog-post-meta">
@@ -17,6 +17,6 @@
         @endif
     </p>
     <p> {{ $card->description }}</p>
-</div><!-- /.blog-post -->
+</article><!-- /.task-card -->
 
     

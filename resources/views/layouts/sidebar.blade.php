@@ -1,5 +1,5 @@
-<aside class="col-sm-3 ml-sm-auto blog-sidebar">
-    <div class="sidebar-module sidebar-module-inset">
+<aside>
+    <div class="aside-item">
         <h4>About</h4>
         <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. 
             Cras mattis consectetur purus sit amet fermentum. Aenean lacinia 
@@ -7,7 +7,7 @@
         </p>
     </div>
     @if( isset($archives) )
-        <div class="sidebar-module">
+        <div class="aside-item">
             <h4>Cards archives</h4>
             <ol class="list-unstyled">
                 @foreach($archives as $stats)
@@ -21,7 +21,7 @@
         </div>
     @endif
 
-    <div class="sidebar-module">
+    <div class="aside-item">
         <h4>Tags</h4>
         <ol class="list-unstyled">
             @foreach($tags as $tag)
@@ -33,4 +33,4 @@
             @endforeach
         </ol>
     </div>
-</aside><!-- /.blog-sidebar -->
+</aside><!-- /sidebar -->

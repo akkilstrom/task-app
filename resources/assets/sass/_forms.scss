@@ -1,0 +1,48 @@
+form {
+    // border: 1px solid red;
+    max-width: 600px;
+}
+
+.form-group, {
+    display: block;
+    margin-bottom: 1rem;
+
+    input, textarea {
+        width: 100%;
+        border: 1px solid #ced4da;
+        background-color: white;
+        line-height: 1.5;
+        padding: .5rem .75rem;
+        color: #495057;   
+        border-radius: .25rem;
+        // transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+}
+
+label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+input[type=checkbox], input[type=radio] {
+
+}
+
+// .radio, {
+//     display: block;
+// }
+
+
+// textarea {
+//     text-rendering: auto;
+//     overflow: auto;
+//     resize: vertical;
+//     touch-action: manipulation;
+//     white-space: pre-wrap;
+//     word-wrap: break-word;
+// }
+
+// button, input, select, textarea {
+//     margin: 0;
+// }
