@@ -19,22 +19,22 @@
     </head>
 
     <body>
-        <header>
-            <div class="header-content">
-                <div class="logo-container">
-                    <h1 class="logo">The Taskboard</h1>
-                </div>
-                <nav class="nav">
-                    @guest
-                        <a class="nav-item" href="{{ route('login') }}">
-                            <i class="fa fa-sign-in" aria-hidden="true"></i><br>
-                            Login
-                        </a>
-                        <a class="nav-item" href="{{ route('register') }}">
-                            <i class="fa fa-user-plus" aria-hidden="true"></i><br>
-                            Register
-                        </a>
-                    @else
+        @guest
+            <a class="nav-item" href="{{ route('login') }}">
+                <i class="fa fa-sign-in" aria-hidden="true"></i><br>
+                Login
+            </a>
+            <a class="nav-item" href="{{ route('register') }}">
+                <i class="fa fa-user-plus" aria-hidden="true"></i><br>
+                Register
+            </a>
+        @else
+            <header>
+                <div class="header-content">
+                    <div class="logo-container">
+                        <h1 class="logo">The Taskboard</h1>
+                    </div>
+                    <nav class="nav">
                         <a class="nav-item active" href="/home">
                             <i class="fa fa-home" aria-hidden="true"></i><br>
                             Home
@@ -59,7 +59,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>  
-                    @endguest
-                </nav>
-            </div><!-- /.header-content -->
-        </header>
+                    </nav>
+                </div><!-- /.header-content -->
+            </header>
+        @endguest
