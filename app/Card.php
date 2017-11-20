@@ -3,6 +3,7 @@
 namespace App;
 use Carbon\Carbon;
 use App\Comment;
+use App\Project;
 
 class Card extends Model {
     
@@ -12,6 +13,10 @@ class Card extends Model {
 
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    public function project() {
+        return $this->belongsTo(Project::class);
     }
 
     public function addComment($body, $user_id) {

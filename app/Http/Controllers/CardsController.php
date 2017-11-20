@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Card;
+use App\Project;
 
-class CardsController extends Controller
-{
+class CardsController extends Controller {
     public function __construct() {
         // you must be signed in to create & store a post. Guests can see the posts
         $this->middleware('auth')->except(['index', 'show']);
@@ -31,7 +31,8 @@ class CardsController extends Controller
     }
 
     public function create() {
-        return view( 'cards.create' );
+        $projects = Project::All();
+        return view( 'cards.create', compact('projects') );
     }
 
     public function store() {
@@ -39,16 +40,28 @@ class CardsController extends Controller
         // If anything fails it redirects to the previous page and..
         // includes a populated errors variable
         $this->validate(request(), [
-            'task'          => 'required',
-            'description'   => 'required',
-            'importance'    => 'required',
-            'deadline'      => 'required'//DOES NOT HAVE TO BE REQUIRED
+            'task'              => 'required',
+            'description'       => 'required',
+            'importance'        => 'required',
+            'deadline'          => 'required',
+            'project_id'        => 'required',
+            'status'            => 'required',
+            'level_of_effort'   => 'required',
+            //ADD ALL THE INPUTS THAT SHALL BE REQUIRED
         ]);
 
         // Calls a method on your authenticated user object & publish a new... 
         // ...card which will be linked to the authenticated user
         auth()->user()->publish(
-            new Card(request(['task', 'description', 'importance', 'deadline']))
+            new Card(request([
+                'task', 
+                'description', 
+                'importance', 
+                'deadline', 
+                'project_id',
+                'status',
+                'level_of_effort'
+            ]))
         );
 
         session()->flash( 'message', 'Your card has been added.' );

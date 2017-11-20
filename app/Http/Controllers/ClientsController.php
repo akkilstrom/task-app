@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Client;
 
-class ClientsController extends Controller
-{
+class ClientsController extends Controller {
+
+    public function index() {
+        $clients = Client::orderBy('name', 'asc')->get();
+        return view( 'clients.index', compact('clients') );
+    }
+
     public function create() {
         return view( 'clients.create' );
     }
@@ -13,18 +19,13 @@ class ClientsController extends Controller
     public function store() {
         $this->validate(request(), [
             'name'          => 'required',
-            'department'    => 'required',
-            'client'        => 'required'
         ]);
 
-        auth()->user()->addProject(
-            //lägg till client
-            new Project(request(['name', 'department', 'client']))
-        );
+        Client::create(request([ 'name' ]));
 
-        session()->flash( 'message', 'Your project has been added.' );
+        session()->flash( 'message', 'The client has been added.' );
 
         // Redirects back to all projects
-        return redirect( '/projects' );
+        return redirect( '/clients' );
     }
 }

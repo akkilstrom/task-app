@@ -12,4 +12,8 @@ class Project extends Model
         return $this->belongsTo(Client::class);
     }
 
+    public function addTask($body, $user_id) {
+        $this->comments()->create(compact('body', 'user_id'));
+    }
+
 }

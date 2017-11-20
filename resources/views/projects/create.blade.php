@@ -21,11 +21,15 @@
             <input type="text" class="form-control" id="department" name="department" >
         </div>
 
-        {{--  Client CHANGE TO DROP DOWN --}}
-        {{--  <div class="form-group">
-            <label for="client">Client</label>
-            <input type="text" class="form-control" id="client" name="client" required>
-        </div>  --}}
+         {{--  Client --}} 
+        <div class="form-group">
+            <label for="client_id">Client</label>
+            <select id="client_id" name="client_id" class="form-control" required>
+                @foreach($clients as $client)
+                    <option value="{{ $client->id }}">{{ $client->name }}</option> 
+                @endforeach
+            </select>
+        </div>
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Add project</button>

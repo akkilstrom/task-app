@@ -2,13 +2,15 @@
     <h2>
         <a href="/cards/{{ $card->id }}">{{ $card->task }}</a>
     </h2>
-    <p class="blog-post-meta">
+    <p class="task-meta">
+        {{-- Client: {{ $client->name }} <br> --}}
         <a href="#">{{ $card->user->name }}</a> on
         {{ $card->created_at->toFormattedDateString() }} 
     </p>
-    <p class="blog-post-meta">
+    <p class="task-meta">
         Priority: {{ $card->importance }} <br>
         Deadline: {{ $card->deadline }} <br>
+
         @if(count($card->tags))
             Tags:
             @foreach($card->tags as $tag)

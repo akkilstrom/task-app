@@ -27,6 +27,12 @@ Route::get('/employees/{employee}', 'EmployeesController@show');
 Route::get('/projects', 'ProjectsController@index');
 Route::get('/projects/create', 'ProjectsController@create');
 Route::post('/projects', 'ProjectsController@store');
+Route::get('/projects/{project}', 'ProjectsController@show');
+
+// CLIENT ROUTES
+Route::get('/clients', 'ClientsController@index');
+Route::get('/clients/create', 'ClientsController@create');
+Route::post('/clients', 'ClientsController@store');
 
 // TASK ROUTES          SKALL ÄNDRAS TILL TASKS ISTÄLLET?????
 Route::get('/cards', 'CardsController@index');

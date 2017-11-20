@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Pacifico);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Pacifico);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 
 /**
  * 1. Set default font family to sans-serif.
@@ -628,11 +628,6 @@ main {
   padding: 10rem 0 15rem;
 }
 
-.success-container,
-.error-container {
-  font-size: 1.6rem;
-}
-
 .success-container {
   color: #2ab27b;
 }
@@ -649,6 +644,10 @@ main {
   -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
           box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
   margin-bottom: 1.5rem;
+}
+
+.task-card .task-meta {
+  font-size: 0.8rem;
 }
 
 /*------------------------------------------------------------------------------

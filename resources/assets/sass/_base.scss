@@ -108,7 +108,7 @@ main {
 }
 
 .success-container, .error-container {
-    font-size: 1.6rem;
+    // font-size: 1.6rem;
 }
 
 .success-container {
@@ -126,6 +126,10 @@ main {
     border-radius: .25rem;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
     margin-bottom: 1.5rem;
+
+    .task-meta {
+        font-size:0.8rem;
+    }
 }
 
 /*------------------------------------------------------------------------------
