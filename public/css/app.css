@@ -610,17 +610,15 @@ header .header-content nav {
           flex-grow: 2;
 }
 
-header .header-content nav a {
+header .header-content nav a,
+header .header-content nav .icon {
   color: white;
   text-align: center;
 }
 
-header .header-content nav a:hover {
+header .header-content nav a:hover,
+header .header-content nav .icon:hover {
   color: orange;
-}
-
-header .header-content nav .fa {
-  font-size: 2rem;
 }
 
 main {

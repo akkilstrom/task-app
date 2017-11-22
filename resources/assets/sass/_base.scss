@@ -84,7 +84,7 @@ header {
             // border: 1px dotted blue;
             flex-grow: 2;
     
-            a {
+            a, .icon {
                 color: white;
                 text-align: center;
 
@@ -93,9 +93,9 @@ header {
                 }
             }
 
-            .fa {
-                font-size: 2rem;
-            }
+            // .fa {
+            //     font-size: 2rem;
+            // }
         }
     } 
 }

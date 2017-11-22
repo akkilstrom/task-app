@@ -37,16 +37,19 @@
                     </div>
                     <nav class="nav">
                         <a class="nav-item active" href="/home">
-                            <i class="fa fa-home" aria-hidden="true"></i><br>
-                            Home
+                            {{-- <i class="fa fa-home" aria-hidden="true"></i><br> --}}
+                            <img class="icon" src="https://icongr.am/clarity/home.svg?size=40&color=ffffff" alt="home"><br>
+                            Dashboard
                         </a>
-                        <a class="nav-item" href="/models">
-                            <i class="fa fa-database" aria-hidden="true"></i><br>
-                            Models
+                        <a class="nav-item" href="/projects">
+                            {{-- <i class="fa fa-database" aria-hidden="true"></i> --}}
+                            <img class="icon" src="https://icongr.am/clarity/tasks.svg?size=40&color=ffffff" alt="projects"><br>
+                            Projects
                         </a>
-                        <a class="nav-item" href="/tasks">
-                            <i class="fa fa-table" aria-hidden="true"></i><br>
-                            Content
+                        <a class="nav-item" href="/clients">
+                            {{-- <i class="fa fa-table" aria-hidden="true"></i><br> --}}
+                            <img class="icon" src="https://icongr.am/clarity/users.svg?size=40&color=ffffff" alt="clients"><br>
+                            Clients
                         </a>
                         {{--  <a class="nav-link ml-auto" href="#">
                             {{ Auth::user()->name }} 
@@ -54,7 +57,8 @@
                         <a class="nav-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                            <i class="fa fa-sign-out" aria-hidden="true"></i><br>
+                            {{-- <i class="fa fa-sign-out" aria-hidden="true"></i><br> --}}
+                            <img class="icon" src="https://icongr.am/clarity/logout.svg?size=40&color=ffffff" alt="logout"><br>
                             Logout
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
