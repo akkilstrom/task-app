@@ -2,12 +2,12 @@
 
 @section( 'content' )
     
-    @include( 'cards.card' )
+    @include( 'tasks.task' )
     <hr>
 
     <div class="comments">
         <ul class="list-group">
-            @foreach( $card->comments as $comment )
+            @foreach( $task->comments as $comment )
                 <li class="list-group-item">
                     <strong>
                         {{ $comment->user->name }}
@@ -26,7 +26,7 @@
         <div class="card">
             <div class="card-block">
 
-                <form action="/cards/{{$card->id}}/comments" method="POST">
+                <form action="/tasks/{{$task->id}}/comments" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <textarea name="body" id="comment" class="form-control" 
@@ -34,7 +34,7 @@
                         </textarea>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Add comment</button>
+                        <button type="submit">Add comment</button>
                     </div>
                 </form>
 

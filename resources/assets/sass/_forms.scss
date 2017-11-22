@@ -29,6 +29,25 @@ input[type=checkbox], input[type=radio] {
 
 }
 
+button {
+    display: block;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+    padding: 0.5rem 0.8rem;
+    border: 3px solid orange;
+
+    &:hover {
+        background-color: white;
+        color: orange;
+    }
+}
+
 // .radio, {
 //     display: block;
 // }

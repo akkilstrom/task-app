@@ -468,6 +468,25 @@ label {
   margin-bottom: .5rem;
 }
 
+button {
+  display: block;
+  border: none;
+  background-color: orange;
+  color: white;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+  border: 3px solid orange;
+}
+
+button:hover {
+  background-color: white;
+  color: orange;
+}
+
 /*------------------------------------------------------------------------------
     BASE
 ------------------------------------------------------------------------------*/
@@ -610,15 +629,23 @@ header .header-content nav {
           flex-grow: 2;
 }
 
-header .header-content nav a,
-header .header-content nav .icon {
+header .header-content nav a {
   color: white;
   text-align: center;
 }
 
-header .header-content nav a:hover,
-header .header-content nav .icon:hover {
+header .header-content nav a:hover {
   color: orange;
+}
+
+header .header-content nav a .icon:hover {
+  color: orange;
+}
+
+header .header-content .nav-logged-out {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 main {
@@ -635,10 +662,9 @@ main {
 }
 
 .task-card {
-  background-color: orange;
+  background-color: #f7cd96;
   max-width: 30rem;
   padding: 0.3rem 1rem 1rem 1rem;
-  border-radius: .25rem;
   -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
           box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
   margin-bottom: 1.5rem;

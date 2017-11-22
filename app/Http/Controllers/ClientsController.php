@@ -7,6 +7,10 @@ use App\Client;
 
 class ClientsController extends Controller {
 
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function index() {
         $clients = Client::orderBy('name', 'asc')->get();
         return view( 'clients.index', compact('clients') );
@@ -18,7 +22,7 @@ class ClientsController extends Controller {
 
     public function store() {
         $this->validate(request(), [
-            'name'          => 'required',
+            'name' => 'required',
         ]);
 
         Client::create(request([ 'name' ]));

@@ -2,8 +2,8 @@
 
 @section( 'content' )
     <h1>Tasks</h1>
-    @foreach( $cards as $card )
-        @include( 'cards.card' )
+    @foreach( $tasks as $task )
+        @include( 'tasks.task' )
     @endforeach
     
     <nav class="pagination">

@@ -5,8 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
-{
+class User extends Authenticatable {
     use Notifiable;
 
     /**
@@ -27,13 +26,22 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function cards() {
-        return $this->hasMany(Card::class);
+    // public function cards() {
+    //     return $this->hasMany(Card::class);
+    // }
+
+    // public function publish(Card $card) {
+    //     // This cards save the given card
+    //     $this->cards()->save($card);
+    // }
+
+    public function tasks() {
+        return $this->hasMany(Task::class);
     }
 
-    public function publish(Card $card) {
+    public function publish(Task $task) {
         // This cards save the given card
-        $this->cards()->save($card);
+        $this->tasks()->save($task);
     }
 
     public function addProject(Project $project) {

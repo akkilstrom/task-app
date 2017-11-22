@@ -5,8 +5,8 @@ use Carbon\Carbon;
 use App\Comment;
 use App\Project;
 
-class Card extends Model {
-    
+class Task extends Model {
+
     public function comments() {
         return $this->hasMany(Comment::class);
     }

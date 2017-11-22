@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Card;
+use App\Task;
 use App\Comment;
 
 class CommentsController extends Controller {
@@ -13,6 +14,8 @@ class CommentsController extends Controller {
     //     $this->middleware('auth');
     // }
     
+
+    // CHANGE TO TASK
     public function store(Card $card) {
 
         $this->validate(request(), ['body' => 'required|min:3']);

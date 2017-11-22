@@ -8,11 +8,10 @@ use App\Client;
 
 class ProjectsController extends Controller {
 
-    //public function __construct() {
-        // you must be signed in to create a project
-    //    $this->middleware('auth');
-    //}
-
+    public function __construct() {
+        $this->middleware('auth');
+    }
+    
     public function index() {
         $projects = Project::orderBy('name', 'asc')->get();
         return view( 'projects.index', compact('projects') );

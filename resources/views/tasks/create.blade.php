@@ -1,9 +1,9 @@
 @extends( 'layouts.master' )
 
 @section( 'content' )
-    <h1>Add a task card</h1>
+    <h1>Add a task</h1>
     <hr>
-    <form method="POST" action="/cards">
+    <form method="POST" action="/tasks">
         {{--  Protects your application from attacks. Generates a CSRF token for 
         each active user session --}}
         {{ csrf_field() }}

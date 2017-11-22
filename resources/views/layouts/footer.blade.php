@@ -9,13 +9,13 @@
             <a href="#">Content</a>
             </ol>
         </div>
-        <div class="footer-item">
+        {{-- <div class="footer-item">
             <h4>Elsewhere</h4>
             <a href="#">GitHub</a> |
             <a href="#">Instagram</a> |
             <a href="#">Facebook</a>
             </ol>
-        </div>
+        </div> --}}
         <div class="footer-item">
             <p><a href="#">Back to top</a></p>
         </div>

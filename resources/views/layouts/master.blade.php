@@ -1,16 +1,16 @@
 @include( 'layouts.header' )
 
-<main role="main" class="container" id="app">
+<main role="main" id="app">
 
-    <div class="row">
-        <div class="col-sm-8 blog-main">
+    {{-- <div class="row">
+        <div class="col-sm-8 blog-main"> --}}
             @include( 'layouts.error' )
             @include( 'layouts.success' )
             @yield( 'content' )
-        </div>
+        {{-- </div> --}}
 
         {{--  @include( 'layouts.sidebar' )  --}}
-    </div><!-- /.row -->
+    {{-- </div><!-- /.row --> --}}
 
 </main><!-- /.container -->
 @include( 'layouts.footer' )

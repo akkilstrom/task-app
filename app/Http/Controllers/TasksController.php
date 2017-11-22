@@ -3,36 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Card;
+use App\Task;
 use App\Project;
 
-class CardsController extends Controller {
+class TasksController extends Controller {
     public function __construct() {
-        // you must be signed in to create & store a post. Guests can see the posts
-        $this->middleware('auth')->except(['index', 'show']);
+        // you must be signed in to create & store a post. 
+        $this->middleware('auth');
+        // ->except(['index', 'show']);Guests can see the posts
     }
 
     public function index() {
         if (request(['month', 'year'])) {
-            $cards = Card::latest()
+            $tasks = Task::latest()
                 ->filter(request(['month', 'year']))
                 ->get();
 
         } else {
-            $cards = Card::latest()->get();
+            $tasks = Task::latest()->get();
         }
 
-        $archives = Card::archives();
-        return view( 'cards.index', compact('cards') );
+        $archives = Task::archives();
+        return view( 'tasks.index', compact('tasks') );
     }
 
-    public function show(Card $card) {
-        return view( 'cards.show', compact('card') );
+    public function show(Task $task) {
+        return view( 'tasks.show', compact('task') );
     }
 
     public function create() {
         $projects = Project::All();
-        return view( 'cards.create', compact('projects') );
+        return view( 'tasks.create', compact('projects') );
     }
 
     public function store() {
@@ -53,7 +54,7 @@ class CardsController extends Controller {
         // Calls a method on your authenticated user object & publish a new... 
         // ...card which will be linked to the authenticated user
         auth()->user()->publish(
-            new Card(request([
+            new Task(request([
                 'task', 
                 'description', 
                 'importance', 
@@ -64,7 +65,7 @@ class CardsController extends Controller {
             ]))
         );
 
-        session()->flash( 'message', 'Your card has been added.' );
+        session()->flash( 'message', 'Your task has been added.' );
         
         //Creates a new card using the request data & saves it to the database
         // Card::create([
@@ -76,6 +77,6 @@ class CardsController extends Controller {
         // ]);
 
         // Redirects back to the card board
-        return redirect( '/cards' );
+        return redirect( '/tasks' );
     }
 }
