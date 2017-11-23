@@ -129,13 +129,19 @@ main {
     color: #bf5329;
 }
 
-.task-card {
+.projects-container {
     background-color: #f7cd96;
+    width: 90%;
     max-width: 30rem;
-    padding: 0.3rem 1rem 1rem 1rem;
-    // border-radius: .25rem;
+    height: 30rem;
+    // padding: 0.3rem 1rem 1rem 1rem;
+    padding: 1rem;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
     margin-bottom: 1.5rem;
+}
+
+.task-card {
+    @extend .projects-container;
 
     .task-meta {
         font-size:0.8rem;

@@ -3,13 +3,15 @@
 @section('content')
 
     <h1>Dashboard, {{ Auth::user()->name }}</h1>
-    {{--  @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @endif
-
-    You are logged in!  --}}
-
-        
+    {{-- @if($projects) --}}
+        <section class="projects-container">
+            @foreach ($projects as $project)
+                {{-- Här skall tasks för detta projekt synas under --}}
+                <a href='/projects/{{$project->id}}'> 
+                    {{ $project->name }}
+                    {{-- User: {{ $project->user_id}} --}}
+                </a>
+            @endforeach  
+        </section>
+    {{-- @endif --}}
 @endsection

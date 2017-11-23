@@ -11,7 +11,7 @@ class ProjectsController extends Controller {
     public function __construct() {
         $this->middleware('auth');
     }
-    
+
     public function index() {
         $projects = Project::orderBy('name', 'asc')->get();
         return view( 'projects.index', compact('projects') );
@@ -29,13 +29,11 @@ class ProjectsController extends Controller {
         ]);
 
         auth()->user()->addProject(
-            //lägg till client
             new Project(request(['name', 'department', 'client_id']))
         );
 
         session()->flash( 'message', 'Your project has been added.' );
 
-        // Redirects back to all projects
         return redirect( '/projects' );
     }
 
