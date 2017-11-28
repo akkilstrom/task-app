@@ -76,6 +76,7 @@ header {
                 margin: 0;
                 font-family: $font-family-logo;
                 letter-spacing: 0.1rem;
+                font-size: 1.8rem;
             }
         }
     
@@ -93,6 +94,7 @@ header {
             text-align: center;
             font-weight: bold;
             letter-spacing: 1.4px;
+            font-size: 0.8rem;
             
             .icon {
                 fill: #fff;
@@ -149,6 +151,34 @@ main {
 
 .projects-container {
     @extend .login-container;
+}
+
+.project-divider {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    border-bottom: 1px solid $border-color;
+    padding: 1rem 0;
+    font-weight: 700;
+}
+
+.edit-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 25%;
+
+    .edit-btn, .trash-btn {
+        &:hover {
+            .icon-smaller {
+                fill: $accent-color;
+            }
+        }
+    }
 }
 
 .task-card {

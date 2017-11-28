@@ -38,7 +38,7 @@
                     <a class="nav-item" href="/">
                         @include( 'icons.home' )
                         <br>
-                        Dashboard
+                        <span class="nav-txt">Dashboard</span>
                     </a>
                     <a class="nav-item" href="/projects">
                         @include( 'icons.project' )

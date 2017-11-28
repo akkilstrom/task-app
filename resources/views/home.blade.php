@@ -1,17 +1,26 @@
 @extends('layouts.master')
 
 @section('content')
-
     <h1>Dashboard, {{ Auth::user()->name }}</h1>
     {{-- @if($projects) --}}
         <section class="projects-container">
             <h2>Your projects</h2>
             @foreach ($projects as $project)
                 {{-- Här skall tasks för detta projekt synas under --}}
-                <a href='/projects/{{$project->id}}'> 
-                    {{ $project->name }}
-                    {{-- User: {{ $project->user_id}} --}}
-                </a>
+                <div class="project-divider">
+                    <a href='/projects/{{$project->id}}'> 
+                        {{ $project->name }}
+                        {{-- User: {{ $project->user_id}} --}}
+                    </a>    
+                    <div class="edit-container">
+                        <a class="edit-btn" href="#">
+                            @include( 'icons.edit' )
+                        </a>
+                        <a class="trash-btn" href="#">
+                            @include( 'icons.trash' )
+                        </a>
+                    </div>
+                </div>
             @endforeach  
             <a href="/projects/create">
                 <button class="icon-btn">

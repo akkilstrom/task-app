@@ -12,12 +12,10 @@
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
-        <div class="form-group">
-            <button type="submit" class="icon-btn">
-				@include( 'icons.plus' )
-				<span class="btn-txt">Add client</span>
-			</button>
-        </div>
+		<button type="submit" class="icon-btn">
+			@include( 'icons.plus' )
+			<span class="btn-txt">Add client</span>
+		</button>
     </form>
     
 @endsection

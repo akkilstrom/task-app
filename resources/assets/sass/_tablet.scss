@@ -6,12 +6,24 @@ header {
 
 		.logo-container {
 			justify-content: flex-start;
+
+			.logo {
+                font-size: 2rem;
+            }
+		}
+		  
+		.nav-item {
+			font-size: 1rem;
 		}
 	}
 }
 
+.edit-container {
+    width: 20%;
+}
+
 /*------------------------------------------------------------------------------
-    FORM STYLING TABLET
+    FORMS-STYLING TABLET
 ------------------------------------------------------------------------------*/
 button { 
 	width: 40%;
@@ -23,10 +35,10 @@ button {
 }
 
 .icon-btn {
-    justify-content: space-around;
+    // justify-content: space-around;
 
 	.btn-txt {
-        padding-left: 0;
+        // padding-left: 0;
     }
 }
 

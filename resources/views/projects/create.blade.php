@@ -3,7 +3,6 @@
 @section( 'content' )
 
     <h1>Add a project</h1>
-    <hr>
     <form method="POST" action="/projects">
         {{--  Protects your application from attacks. Generates a CSRF token for 
         each active user session --}}
@@ -30,10 +29,10 @@
                 @endforeach
             </select>
         </div>
-
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Add project</button>
-        </div>
+        <button type="submit" class="icon-btn">
+			@include( 'icons.plus' )
+			<span class="btn-txt">Add project</span>
+		</button>
     </form>
     
 @endsection
