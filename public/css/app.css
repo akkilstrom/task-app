@@ -482,7 +482,7 @@ button {
   font-family: inherit;
   cursor: pointer;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   outline: none;
   padding: 0.5rem 0.8rem;
   margin-top: 1rem;
@@ -490,6 +490,27 @@ button {
 
 button:hover {
   background-color: #383737;
+}
+
+.icon-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0.5rem 1.2rem;
+}
+
+.icon-btn .btn-txt {
+  padding-left: 1rem;
 }
 
 /*------------------------------------------------------------------------------
@@ -539,6 +560,10 @@ a,
 a:hover,
 .nav-link:hover {
   color: orange;
+}
+
+.icon {
+  fill: #fff;
 }
 
 .list-unstyled {
@@ -663,6 +688,7 @@ header .header-content .nav-logged-out {
 main {
   position: relative;
   width: 90%;
+  max-width: 1000px;
   padding: 10rem 0 0 0;
   min-height: 40rem;
 }
@@ -790,6 +816,15 @@ footer a {
   .reg-btn,
   .login-btn {
     min-width: 100%;
+  }
+
+  .icon-btn {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .icon-btn .btn-txt {
+    padding-left: 0;
   }
 }
 

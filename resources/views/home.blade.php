@@ -14,9 +14,9 @@
                 </a>
             @endforeach  
             <a href="/projects/create">
-                <button>
-                    <img class="icon" src="https://icongr.am/clarity/plus.svg?size=30&color=ffffff" alt="plus">
-                    Edit
+                <button class="icon-btn">
+                    @include( 'icons.plus' )
+                    <span class="btn-txt">Add new</span>
                 </button>
             </a>
         </section>

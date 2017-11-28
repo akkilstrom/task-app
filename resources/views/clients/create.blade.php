@@ -13,7 +13,10 @@
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Add client</button>
+            <button type="submit" class="icon-btn">
+				@include( 'icons.plus' )
+				<span class="btn-txt">Add client</span>
+			</button>
         </div>
     </form>
     

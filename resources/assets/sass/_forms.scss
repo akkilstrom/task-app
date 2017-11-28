@@ -45,13 +45,25 @@ button {
     font-family: inherit;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     outline: none;
     padding: 0.5rem 0.8rem;
     margin-top: 1rem;
 
     &:hover {
         background-color: $btn-hover-color;
+    }
+}
+
+.icon-btn {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 1.2rem;
+
+    .btn-txt {
+        padding-left: 1rem;
     }
 }
 

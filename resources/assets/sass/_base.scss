@@ -32,6 +32,10 @@ a, .nav-link {
     }
 }
 
+.icon {
+    fill: #fff;
+}
+
 .list-unstyled {
     margin: 0;
     padding-left: 0;
@@ -112,6 +116,7 @@ header {
 main {
     position: relative;
     width: 90%;
+    max-width: 1000px;
     padding: 10rem 0 0 0;
     min-height: 40rem;
 }
