@@ -3,7 +3,7 @@
 namespace App;
 use Carbon\Carbon;
 use App\Comment;
-use App\Project;
+use App\Tag;
 
 class Task extends Model {
 

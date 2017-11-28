@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Card;
 use App\Task;
 use App\Comment;
 
@@ -16,12 +15,12 @@ class CommentsController extends Controller {
     
 
     // CHANGE TO TASK
-    public function store(Card $card) {
+    public function store(Task $task) {
 
         $this->validate(request(), ['body' => 'required|min:3']);
         
         $user_id = auth()->user()->id;
-        $card->addComment(request('body'), $user_id);
+        $task->addComment(request('body'), $user_id);
 
         return back();
     }

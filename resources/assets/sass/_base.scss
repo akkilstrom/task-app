@@ -28,7 +28,7 @@ a, .nav-link {
     padding: 0;
 
     &:hover {
-        color: orange;
+        color: $accent-color;
     }
 }
 
@@ -38,7 +38,7 @@ a, .nav-link {
 }
 
 hr {
-    border: 0.5px solid #939292;
+    border: 0.5px solid $border-color;
 }
 /*------------------------------------------------------------------------------
     HEADER BLADE
@@ -46,13 +46,14 @@ hr {
 header {
     position: fixed;
     width: 100%;
-    height: 6rem;
+    height: 8rem;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    background-color: black;
-    color: white;
+    background-color: $head-foot-color;
+    color: $btnlink-color;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+    z-index: 10;
 
     .header-content {
         width: 90%;
@@ -62,11 +63,10 @@ header {
         
         .logo-container {
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-start;
+            // flex-flow: row nowrap;
+            justify-content: center;
             align-items: center;
             flex-grow: 1;
-            // border: 2px solid green;
     
             .logo {
                 margin: 0;
@@ -81,27 +81,26 @@ header {
             justify-content: space-between;
             align-items: center;
             align-content: space-between;
-            // border: 1px dotted blue;
             flex-grow: 2;
-    
-            a {
-                color: white;
-                text-align: center;
+        }
 
-                &:hover {
-                    color: orange;
-                }
+        .nav-item, .footer-item {
+            color: $btnlink-color;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            
+            .icon {
+                fill: #fff;
+            }
+            
+            &:hover {
+                color: $accent-color;
 
                 .icon {
-                    &:hover {
-                        color: orange;
-                    }
+                    fill: $accent-color;
                 }
             }
-
-            // .fa {
-            //     font-size: 2rem;
-            // }
         }
 
         .nav-logged-out {
@@ -111,14 +110,10 @@ header {
 }
 
 main {
+    position: relative;
     width: 90%;
-    // max-width: 1200px;
-    // border: 1px dotted blue;
-    padding: 10rem 0 15rem;
-}
-
-.success-container, .error-container {
-    // font-size: 1.6rem;
+    padding: 10rem 0 0 0;
+    min-height: 40rem;
 }
 
 .success-container {
@@ -129,19 +124,30 @@ main {
     color: #bf5329;
 }
 
-.projects-container {
-    background-color: #f7cd96;
-    width: 90%;
+.login-content, .register-content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    // margin-bottom: 2rem;
+}
+
+.login-container, .reg-container {
+    background-color: $box-bg-color;
+    width: 100%;
     max-width: 30rem;
-    height: 30rem;
-    // padding: 0.3rem 1rem 1rem 1rem;
-    padding: 1rem;
+    padding: 1rem 1rem 2.5rem 1rem;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.projects-container {
+    @extend .login-container;
 }
 
 .task-card {
-    @extend .projects-container;
+    @extend .login-container;
 
     .task-meta {
         font-size:0.8rem;
@@ -158,9 +164,10 @@ footer {
     justify-content: center;
     align-content: center;
     width: 100%;
-    background-color: black;
+    background-color: $head-foot-color;
+    // position: absolute;
     bottom: 0;
-    color: white;
+    color: $btnlink-color;
 
     .footer-item {
         padding-top: 0.8rem;
@@ -183,6 +190,6 @@ footer {
     }
 
     a {
-        color: white;
+        color: $btnlink-color;
     }
 }

@@ -7,12 +7,21 @@
 @import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
 // <script src="https://use.fontawesome.com/cd6945c514.js"></script>
 
-// Forms
-@import "forms";
-
 // Variables
 @import "variables";
 
+// Forms
+@import "forms";
+
+// Mobile devices
 @import "base";
 
+// Mobile landscape, tablets
+@media screen and (min-width:800px) { 
+    @import "tablet";
+}
 
+// Tablet landscape, desktops
+// @media screen and (min-width: 1024px) { 
+//     @import "desktop";
+// }

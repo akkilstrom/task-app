@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Tag;
+use App\Task;
+
 use Illuminate\Http\Request;
 
 class TagsController extends Controller {

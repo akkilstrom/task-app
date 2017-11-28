@@ -1,10 +1,15 @@
 
 // Colors
 $text-color-body: #474c4f;
-$btn-color: $text-color-body;
+$btnlink-color: white;
+$head-foot-color: black;
+$btn-color: $head-foot-color;
+$btn-hover-color: #383737;
+$accent-color: orange;
+$border-color: #939292;
+$box-bg-color: #e0dede;
 
 // Typography
-
 $font-family-body: "Raleway", sans-serif;
 $font-family-logo:"Pacifico";
 $font-size-base: 1rem; //14px

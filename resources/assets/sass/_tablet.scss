@@ -1,0 +1,27 @@
+header {
+    height: 6rem;
+
+    .header-content {
+        justify-content: flex-start;
+
+		.logo-container {
+			justify-content: flex-start;
+		}
+	}
+}
+
+/*------------------------------------------------------------------------------
+    FORM STYLING TABLET
+------------------------------------------------------------------------------*/
+button { 
+	width: 40%;
+	max-width: 15rem;
+}
+
+.reg-btn, .login-btn {
+	min-width: 100%;
+}
+
+
+
+    

@@ -14,7 +14,7 @@
         @if(count($task->tags))
             Tags:
             @foreach($task->tags as $tag)
-                <a href="/cards/tags/{{ $tag->name }}">#{{ $tag->name }}</a>
+                <a href="/tasks/tags/{{ $tag->name }}">#{{ $tag->name }}</a>
             @endforeach
         @endif
     </p>

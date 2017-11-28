@@ -8,11 +8,11 @@
     </div>
     @if( isset($archives) )
         <div class="aside-item">
-            <h4>Cards archives</h4>
+            <h4>Tasks archives</h4>
             <ol class="list-unstyled">
                 @foreach($archives as $stats)
                     <li>
-                        <a href="/cards?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
+                        <a href="/tasks?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
                             {{ $stats['month'] . ' ' . $stats['year'] }}
                         </a>
                     </li>
@@ -26,7 +26,7 @@
         <ol class="list-unstyled">
             @foreach($tags as $tag)
                 <li>
-                    <a href="/cards/tags/{{ $tag }}">
+                    <a href="/tasks/tags/{{ $tag }}">
                        #{{ $tag }}
                     </a>
                 </li>

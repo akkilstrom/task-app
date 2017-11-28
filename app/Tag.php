@@ -6,8 +6,8 @@ namespace App;
 
 class Tag extends Model {
     
-    public function cards() {
-        return $this->belongsToMany(Card::class);
+    public function tasks() {
+        return $this->belongsToMany(Task::class);
     }
 
     //this function binds the id to the tag name
