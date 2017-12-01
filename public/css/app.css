@@ -570,6 +570,7 @@ a:hover,
 .list-unstyled {
   margin: 0;
   padding-left: 0;
+  list-style-type: none;
 }
 
 hr {
@@ -696,12 +697,24 @@ main {
   min-height: 40rem;
 }
 
-.success-container {
+.success-container,
+.success-container-center {
   color: #2ab27b;
 }
 
-.error-container {
+.success-container-center {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.error-container,
+.error-container-center {
   color: #bf5329;
+}
+
+.error-container-center {
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .login-content,

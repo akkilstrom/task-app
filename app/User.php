@@ -46,7 +46,6 @@ class User extends Authenticatable {
     }
 
     public function addProject(Project $project) {
-        // This cards save the given card
         $this->tasks()->save($project);
     }
 

@@ -1,5 +1,9 @@
 @if( $flash = session('message') )
-    <div class="success-container">
-        {{ $flash }}
-    </div>
+    @guest
+        <div class="success-container-center">
+    @else
+        <div class="success-container">
+    @endguest
+            {{ $flash }}
+        </div>
 @endif

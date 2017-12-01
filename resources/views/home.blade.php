@@ -13,10 +13,10 @@
                         {{-- User: {{ $project->user_id}} --}}
                     </a>    
                     <div class="edit-container">
-                        <a class="edit-btn" href="#">
+                        <a class="edit-btn" href="/projects/{{$project->id}}/edit">
                             @include( 'icons.edit' )
                         </a>
-                        <a class="trash-btn" href="#">
+                        <a class="trash-btn" href="/projects/{{$project->id}}/delete">
                             @include( 'icons.trash' )
                         </a>
                     </div>

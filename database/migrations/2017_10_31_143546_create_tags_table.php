@@ -18,7 +18,7 @@ class CreateTagsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('task_tag', function (Blueprint $table) {
+        Schema::create('tag_task', function (Blueprint $table) {
             //
             $table->integer('task_id');
             $table->integer('tag_id');
@@ -34,6 +34,6 @@ class CreateTagsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('tags');
-        Schema::dropIfExists('task_tag');
+        Schema::dropIfExists('tag_task');
     }
 }
