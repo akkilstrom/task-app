@@ -1,7 +1,25 @@
 <article class="task-card">
-    <h2>
-        <a href="/tasks/{{ $task->id }}">{{ $task->task }}</a>
-    </h2>
+    <div class="task-header">
+        <h2>
+            <a href="/tasks/{{ $task->id }}">{{ $task->task }}</a>
+        </h2>
+        <div class="status-container">
+            @switch($task->status)
+                @case(0)
+                    @include( 'icons.todo' )
+                    @break
+
+                @case(1)
+                    @include( 'icons.progress' )
+                    @break
+                
+                {{-- ändra till 2 och ta bort in review --}}
+                @case(3) 
+                    @include( 'icons.done' )
+            @endswitch
+        </div>
+    </div>
+    
     <p class="task-meta">
         {{-- Client: {{ $client->name }} <br> --}}
         <a href="#">{{ $task->user->name }}</a> on

@@ -560,7 +560,7 @@ a,
 
 a:hover,
 .nav-link:hover {
-  color: orange;
+  color: #e5ae2d;
 }
 
 .icon {
@@ -675,12 +675,12 @@ header .header-content .footer-item .icon {
 
 header .header-content .nav-item:hover,
 header .header-content .footer-item:hover {
-  color: orange;
+  color: #e5ae2d;
 }
 
 header .header-content .nav-item:hover .icon,
 header .header-content .footer-item:hover .icon {
-  fill: orange;
+  fill: #e5ae2d;
 }
 
 header .header-content .nav-logged-out {
@@ -693,7 +693,7 @@ main {
   position: relative;
   width: 90%;
   max-width: 1000px;
-  padding: 10rem 0 0 0;
+  padding: 10rem 0 5rem 0;
   min-height: 40rem;
 }
 
@@ -791,15 +791,76 @@ main {
 
 .edit-container .edit-btn:hover .icon-smaller,
 .edit-container .trash-btn:hover .icon-smaller {
-  fill: orange;
+  fill: #e5ae2d;
+}
+
+/*------------------------------------------------------------------------------
+    TASK BLADE STYLING
+------------------------------------------------------------------------------*/
+
+.tasks-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.task-card {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
 }
 
 .task-card .task-meta {
   font-size: 0.8rem;
 }
 
+.task-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.task-header h2 {
+  margin: 0;
+}
+
+.todo {
+  fill: #bf5329;
+}
+
+.progress {
+  fill: #e5ae2d;
+}
+
+.done {
+  fill: #2ab27b;
+}
+
 /*------------------------------------------------------------------------------
-    FOOTER BLADE
+    FOOTER BLADE STYLING
 ------------------------------------------------------------------------------*/
 
 footer {

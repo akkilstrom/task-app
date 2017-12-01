@@ -120,12 +120,12 @@ main {
     position: relative;
     width: 90%;
     max-width: 1000px;
-    padding: 10rem 0 0 0;
+    padding: 10rem 0 5rem 0;
     min-height: 40rem;
 }
 
 .success-container {
-    color: #2ab27b;
+    color: $success-color;
 }
 
 .success-container-center {
@@ -194,16 +194,53 @@ main {
     }
 }
 
+/*------------------------------------------------------------------------------
+    TASK BLADE STYLING
+------------------------------------------------------------------------------*/
+.tasks-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
 .task-card {
     @extend .login-container;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
 
     .task-meta {
         font-size:0.8rem;
     }
 }
 
+.task-header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.todo {
+    fill: $error-color;
+}
+.progress {
+    fill: $progress-color;
+}
+.done {
+   fill: $success-color;
+}
+
+
+
 /*------------------------------------------------------------------------------
-    FOOTER BLADE
+    FOOTER BLADE STYLING
 ------------------------------------------------------------------------------*/
 footer {
     display: flex;
