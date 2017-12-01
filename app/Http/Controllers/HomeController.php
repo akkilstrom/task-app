@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Project;
+use App\Client;
 use Auth;
 
 class HomeController extends Controller {
@@ -24,7 +25,13 @@ class HomeController extends Controller {
     public function index(Project $project) {   
 
         $projects = Project::whereUserId(Auth::id())->get();
+        $matchingClient = Client::find($project->client_id);
     
-        return view( '/home', compact('projects') );
+        // return view( '/home', compact('projects') );
+
+        return view( '/home', [
+            'projects'          => $projects,
+            'matchingClient'    => $matchingClient,
+        ]);
     }
 }

@@ -23,7 +23,9 @@ Route::get('/projects/create', 'ProjectsController@create');
 Route::post('/projects', 'ProjectsController@store');
 Route::get('/projects/{project}', 'ProjectsController@show');
 Route::get('/projects/{project}/edit', 'ProjectsController@edit');
-Route::post('/projects', 'ProjectsController@update');
+Route::post('/projects/{project}', 'ProjectsController@update');
+Route::put('/projects/{id}', 'ProjectsController@update')->name('projects.update');
+Route::delete('/projects/{project}/destroy', 'ProjectsController@destroy');
 
 // CLIENT ROUTES
 Route::get('/clients', 'ClientsController@index');

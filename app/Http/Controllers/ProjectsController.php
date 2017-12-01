@@ -45,14 +45,24 @@ class ProjectsController extends Controller {
         return view( 'projects.show', compact('project') );
     }
 
-    
+    // public function edit(Project $project) {
+    //     $client = Client::find($project->client_id);
+    //     $selected_client_name = $client->name;
+
+    //     return view( 'projects.edit', [
+    //         'project'               => $project,
+    //         'selected_client_name'  => $selected_client_name  
+    //     ]);
+    // }
+
     public function edit(Project $project) {
-        $client = Client::find($project->client_id);
-        $selected_client_name = $client->name;
+        $selectedClient = Client::find($project->client_id);
+        $allClients = Client::All();
 
         return view( 'projects.edit', [
-            'project'               => $project,
-            'selected_client_name'  => $selected_client_name  
+            'project'           => $project,
+            'selectedClient'    => $selectedClient,
+            'allClients'        => $allClients
         ]);
     }
 
@@ -64,9 +74,13 @@ class ProjectsController extends Controller {
         ]);
 
         $project = Project::find($id);
-        $project->save();
-        
-        return redirect()->route('projects.index');
+
+        $project->update([
+            "name"      => $request->input('name'),
+            "client_id" => $request->input('client_id')
+        ]);
+
+        return redirect( '/projects' );
     }
 
     

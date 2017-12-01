@@ -514,6 +514,16 @@ button:hover {
   padding-left: 1rem;
 }
 
+.trash-btn {
+  padding: 0;
+  background-color: transparent;
+  margin: 0;
+}
+
+.trash-btn:hover {
+  background-color: transparent;
+}
+
 /*------------------------------------------------------------------------------
     BASE
 ------------------------------------------------------------------------------*/
@@ -560,7 +570,7 @@ a,
 
 a:hover,
 .nav-link:hover {
-  color: #e5ae2d;
+  color: orange;
 }
 
 .icon {
@@ -675,12 +685,12 @@ header .header-content .footer-item .icon {
 
 header .header-content .nav-item:hover,
 header .header-content .footer-item:hover {
-  color: #e5ae2d;
+  color: orange;
 }
 
 header .header-content .nav-item:hover .icon,
 header .header-content .footer-item:hover .icon {
-  fill: #e5ae2d;
+  fill: orange;
 }
 
 header .header-content .nav-logged-out {
@@ -749,6 +759,10 @@ main {
   margin-bottom: 3rem;
 }
 
+.projects-container {
+  max-width: 70rem;
+}
+
 .project-divider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,7 +805,7 @@ main {
 
 .edit-container .edit-btn:hover .icon-smaller,
 .edit-container .trash-btn:hover .icon-smaller {
-  fill: #e5ae2d;
+  fill: orange;
 }
 
 /*------------------------------------------------------------------------------

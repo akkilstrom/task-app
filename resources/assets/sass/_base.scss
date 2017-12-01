@@ -164,6 +164,7 @@ main {
 
 .projects-container {
     @extend .login-container;
+    max-width: 70rem;
 }
 
 .project-divider {
@@ -186,6 +187,7 @@ main {
     width: 25%;
 
     .edit-btn, .trash-btn {
+
         &:hover {
             .icon-smaller {
                 fill: $accent-color;
