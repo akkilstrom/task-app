@@ -25,13 +25,11 @@ class HomeController extends Controller {
     public function index(Project $project) {   
 
         $projects = Project::whereUserId(Auth::id())->get();
-        $matchingClient = Client::find($project->client_id);
-    
-        // return view( '/home', compact('projects') );
+        // $matchingClient = Client::find($project->client_id);
 
         return view( '/home', [
             'projects'          => $projects,
-            'matchingClient'    => $matchingClient,
+            // 'matchingClient'    => $matchingClient,
         ]);
     }
 }

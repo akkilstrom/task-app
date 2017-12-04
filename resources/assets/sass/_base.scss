@@ -11,6 +11,7 @@ body {
     font-weight: 300;
     color: $text-color-body;
     box-sizing: border-box;
+    min-height: 100vh;
 }
 
 *, ::after, ::before {
@@ -122,6 +123,8 @@ main {
     max-width: 1000px;
     padding: 10rem 0 5rem 0;
     min-height: 40rem;
+    // flex: 1;
+    flex: 1 0 auto;
 }
 
 .success-container {
@@ -164,7 +167,7 @@ main {
 
 .projects-container {
     @extend .login-container;
-    max-width: 70rem;
+    max-width: 60rem;
 }
 
 .project-divider {
@@ -252,10 +255,9 @@ footer {
     align-content: center;
     width: 100%;
     background-color: $head-foot-color;
-    // position: absolute;
     bottom: 0;
-    // margin-bottom: 0;
     color: $btnlink-color;
+    flex-shrink: 0;
 
     .footer-item {
         padding-top: 0.8rem;

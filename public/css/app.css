@@ -546,6 +546,7 @@ body {
   color: #474c4f;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 100vh;
 }
 
 *,
@@ -705,6 +706,9 @@ main {
   max-width: 1000px;
   padding: 10rem 0 5rem 0;
   min-height: 40rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .success-container,
@@ -760,7 +764,7 @@ main {
 }
 
 .projects-container {
-  max-width: 70rem;
+  max-width: 60rem;
 }
 
 .project-divider {
@@ -897,6 +901,8 @@ footer {
   background-color: black;
   bottom: 0;
   color: white;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 footer .footer-item {
@@ -949,7 +955,7 @@ footer a {
   }
 
   .edit-container {
-    width: 20%;
+    width: 10%;
   }
 
   /*------------------------------------------------------------------------------

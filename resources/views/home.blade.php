@@ -9,24 +9,22 @@
             <div class="project-divider">
                 <a href='/projects/{{$project->id}}'> 
                     {{ $project->name }}
-                    {{-- User: {{ $project->user_id}} --}}
                 </a>   
-                <a href='/clients/{{$matchingClient->id}}'> 
+                {{-- <a href='/clients/{{$matchingClient->id}}'> 
                     {{ $matchingClient->name }}
-                    {{-- User: {{ $project->user_id}} --}}
-                </a>  
+                </a>  --}}
                 <div class="edit-container">
                     <a class="edit-btn" href="/projects/{{$project->id}}/edit">
                         @include( 'icons.edit' )
                     </a>
-                    {{-- <form action="{{ route('projects.destroy', ['id' => $project->id]) }}" 
+                    <form action="{{ route('projects.destroy', ['id' => $project->id]) }}" 
                         method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        {{ method_field('DELETE') }}--}}
+                        {{ method_field('DELETE') }}
                         <button type="submit" class="trash-btn">
                             @include( 'icons.trash' )
                         </button>
-                    {{-- </form>  --}}
+                    </form> 
                 </div>
             </div>
         @endforeach  
