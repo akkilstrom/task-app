@@ -11,7 +11,6 @@
 */
 
 // HOME ROUTES
-// Route::get('/', function () { return view('welcome'); });
 Route::get('/', 'HomeController@index')->name('home');
 
 // MODEL ROUTE
@@ -31,6 +30,7 @@ Route::delete('/projects/{project}/destroy', 'ProjectsController@destroy')->name
 Route::get('/clients', 'ClientsController@index');
 Route::get('/clients/create', 'ClientsController@create');
 Route::post('/clients', 'ClientsController@store');
+Route::get('/clients/{client}', 'ClientsController@show');
 
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/create', 'TasksController@create');

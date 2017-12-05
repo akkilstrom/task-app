@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Client;
+use App\Task;
 
 class ProjectsController extends Controller {
 
@@ -42,18 +43,16 @@ class ProjectsController extends Controller {
 
     
     public function show(Project $project) {
+        
+        // $tasksOfProject = Task::find($project->id);
         return view( 'projects.show', compact('project') );
+
+        // return view( 'projects.show', [
+        //     'project'           => $project,
+        //     'tasksOfProject'    => $tasksOfProject
+        // ]);
     }
 
-    // public function edit(Project $project) {
-    //     $client = Client::find($project->client_id);
-    //     $selected_client_name = $client->name;
-
-    //     return view( 'projects.edit', [
-    //         'project'               => $project,
-    //         'selected_client_name'  => $selected_client_name  
-    //     ]);
-    // }
 
     public function edit(Project $project) {
         $selectedClient = Client::find($project->client_id);
@@ -85,11 +84,9 @@ class ProjectsController extends Controller {
 
     
     public function destroy($id) {
-        
-        Project::find($id)->delete();
-        // $project = Project::find($id);
-		// $project->delete();
-        
+
+        Project::findOrFail($id)->delete();
+
         session()->flash( 'message', 'Your project has been deleted.' );
 
         return back();

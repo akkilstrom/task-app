@@ -28,8 +28,17 @@ class ClientsController extends Controller {
         Client::create(request([ 'name' ]));
 
         session()->flash( 'message', 'The client has been added.' );
-
-        // Redirects back to all projects
         return redirect( '/clients' );
     }
+
+     public function show(Client $client) {
+        return view( 'clients.show', compact('client') );
+        // $projectsOfClient = Client::find($project->id);
+
+        // return view( 'projects.show', [
+        //     'client'            => $client,
+        //     'projectsOfClient'  => $projectsOfClient
+        // ]);
+    }
+
 }

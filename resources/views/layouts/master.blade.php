@@ -2,15 +2,11 @@
 
 <main role="main" id="app">
 
-    {{-- <div class="row">
-        <div class="col-sm-8 blog-main"> --}}
-            @include( 'layouts.error' )
-            @include( 'layouts.success' )
-            @yield( 'content' )
-        {{-- </div> --}}
+    @include( 'layouts.error' )
+    @include( 'layouts.success' )
+    @yield( 'content' )
 
-        {{--  @include( 'layouts.sidebar' )  --}}
-    {{-- </div><!-- /.row --> --}}
+    {{--  @include( 'layouts.sidebar' )  --}}
 
 </main><!-- /.container -->
 @include( 'layouts.footer' )

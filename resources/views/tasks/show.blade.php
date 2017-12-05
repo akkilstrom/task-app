@@ -6,39 +6,34 @@
     <hr>
 
     <div class="comments">
-        <ul class="list-group">
+        <ul class="list-unstyled">
             @foreach( $task->comments as $comment )
-                <li class="list-group-item">
+                <li class="list-unstyled">
                     <strong>
                         {{ $comment->user->name }}
                         {{ $comment->created_at->diffForHumans() }}: &nbsp;
                     </strong>
                     {{ $comment->body }}
                 </li>
-
+                <hr>
             @endforeach
         </ul>
     </div>
-    <hr>
+    
     @guest
         <a href="/login">Sign in to write a comment</a>
     @else
-        <div class="card">
-            <div class="card-block">
-
-                <form action="/tasks/{{$task->id}}/comments" method="POST">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <textarea name="body" id="comment" class="form-control" 
-                            placeholder="Your comment here" required>
-                        </textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit">Add comment</button>
-                    </div>
-                </form>
-
-            </div>{{-- /.card-block  --}}
-        </div>{{-- /.card  --}}
+        <h3>Add a comment</h3>
+        <form action="/tasks/{{$task->id}}/comments" method="POST">
+            {{ csrf_field() }}
+            <div class="form-group">
+                <textarea name="body" id="comment" class="form-control" 
+                    placeholder="Your comment here" required>
+                </textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Add comment</button>
+            </div>
+        </form>
     @endguest
 @endsection

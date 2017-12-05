@@ -1,16 +1,8 @@
 @extends( 'layouts.master' )
 
 @section( 'content' )
-    <h1>Projects</h1>
-    <ul>
-        @foreach ($projects as $project)
+    <h1>All projects</h1>
 
-            <li>
-                <a href='/projects/{{$project->id}}'>
-                    {{ $project->name }}
-                </a>
-            </li>
-            
-        @endforeach    
-    </ul>
+    @include( 'layouts.projects' )
+
 @endsection
