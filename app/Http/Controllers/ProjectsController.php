@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Project;
 use App\Client;
 use App\Task;
+use App\User;
+use Auth;
 
 class ProjectsController extends Controller {
 
@@ -14,9 +16,16 @@ class ProjectsController extends Controller {
     }
 
     
-    public function index() {
-        $projects = Project::orderBy('name', 'asc')->get();
-        return view( 'projects.index', compact('projects') );
+    public function index(Project $project) {
+        $projects = Project::orderBy('name', 'asc')->with('client')->get();
+        $loggedInUserId = Auth::id();
+        // dd($projects);
+        // $matchingClient = $project->client;
+
+        return view( 'projects.index', [
+            'projects'          => $projects,
+            'loggedInUserId'    => $loggedInUserId
+        ]);
     }
 
     
@@ -43,14 +52,14 @@ class ProjectsController extends Controller {
 
     
     public function show(Project $project) {
-        
-        // $tasksOfProject = Task::find($project->id);
-        return view( 'projects.show', compact('project') );
-
-        // return view( 'projects.show', [
-        //     'project'           => $project,
-        //     'tasksOfProject'    => $tasksOfProject
-        // ]);
+        // $tasks = Task::find($project->id);
+        $tasks = $project->tasks;
+        // echo '<pre>',print_r($tasks),'</pre>';
+        // return view( 'projects.show', compact('project') );
+        return view( 'projects.show', [
+            'project'   => $project,
+            'tasks'     => $tasks
+        ]);
     }
 
 

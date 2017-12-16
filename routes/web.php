@@ -36,6 +36,10 @@ Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/create', 'TasksController@create');
 Route::post('/tasks', 'TasksController@store');
 Route::get('/tasks/{task}', 'TasksController@show');
+Route::post('/tasks/{task}', 'TasksController@update');
+Route::put('/tasks/{id}', 'TasksController@update')->name('tasks.update');
+Route::delete('/tasks/{task}/destroy', 'TasksController@destroy')->name('tasks.destroy');
+
 
 Route::get('/tasks/tags/{tag}', 'TagsController@index');
 Route::post('/tasks/{task}/comments', 'CommentsController@store');

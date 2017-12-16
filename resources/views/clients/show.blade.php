@@ -3,8 +3,10 @@
 @section( 'content' )
 
     <h1>Projects of {{ $client->name }}</h1>
-	{{-- @foreach( $projects as $project )
-		@include( 'tasks.task' )
-	@endforeach --}}
+	@foreach( $projectsOfClient as $project )
+		<a href='#'> 
+			<li>{{ $project->name }} </li>
+		</a> 
+	@endforeach
     
 @endsection

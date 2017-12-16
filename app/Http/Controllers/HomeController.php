@@ -26,10 +26,14 @@ class HomeController extends Controller {
 
         $projects = Project::whereUserId(Auth::id())->get();
         // $matchingClient = Client::find($project->client_id);
+        $matchingClient = $project->client;
+        // dd($matchingClient);
+        $loggedInUserId = Auth::id();
 
         return view( '/home', [
             'projects'          => $projects,
-            // 'matchingClient'    => $matchingClient,
+            'loggedInUserId'    => $loggedInUserId,
+            'matchingClient'    => $matchingClient
         ]);
     }
 }

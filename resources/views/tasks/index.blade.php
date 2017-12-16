@@ -1,7 +1,7 @@
 @extends( 'layouts.master' )
 
 @section( 'content' )
-    <h1>Tasks</h1>
+    <h1>All tasks</h1>
     <section class="tasks-container">
         @foreach( $tasks as $task )
             @include( 'tasks.task' )
@@ -11,5 +11,4 @@
         <a class="btn-back" href="#">Older</a>
         <a class="btn-forward" href="#">Newer</a>
     </nav>
-
 @endsection

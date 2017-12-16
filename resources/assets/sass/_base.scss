@@ -120,6 +120,7 @@ header {
 main {
     position: relative;
     width: 90%;
+    // max-width: 60rem;
     max-width: 1000px;
     padding: 10rem 0 5rem 0;
     min-height: 40rem;
@@ -137,7 +138,7 @@ main {
 }
 
 .error-container {
-    color: #bf5329;
+    color: $error-color;
 }
 
 .error-container-center {
@@ -164,29 +165,55 @@ main {
     margin-bottom: 3rem;
 }
 
+.profile-container {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 90%;
+    max-width: 10rem;
+    height: 12rem;
+    margin-right: 2rem;
+    background-color: $border-color; 
+}
+
 .projects-container {
     @extend .login-container;
-    max-width: 60rem;
+    max-width: 100%;
 }
 
 .project-divider {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    flex-flow: column nowrap;
+    align-items: flex-start;
     justify-content: space-between;
     align-content: center;
     border-bottom: 1px solid $border-color;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     font-weight: 700;
+    height: 8rem;
+    // border: 1px solid red;
 }
 
-.edit-container {
+.project-column, .client-column {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.edit-column {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     align-content: center;
     width: 25%;
+    max-width: 5rem;
 
     .edit-btn, .trash-btn {
 
@@ -234,9 +261,11 @@ main {
 .todo {
     fill: $error-color;
 }
+
 .progress {
     fill: $progress-color;
 }
+
 .done {
    fill: $success-color;
 }

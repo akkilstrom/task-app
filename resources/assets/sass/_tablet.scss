@@ -18,7 +18,25 @@ header {
 	}
 }
 
-.edit-container {
+// .profile-container {
+//     width: 70%;
+// }
+
+.project-divider {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+	height: 4rem;
+}
+
+.project-column, .client-column {
+    width: 35%;
+	margin-bottom: 0;
+}
+
+.edit-column {
     width: 10%;
 }
 

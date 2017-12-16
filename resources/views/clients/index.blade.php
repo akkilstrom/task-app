@@ -5,13 +5,11 @@
 	@if( count($clients) >= 1 )
 		<ul>
 			@foreach ($clients as $client)
-				
 				<a href='/clients/{{$client->id}}'> 
-				<li>
-				
-					{{ $client->name }}
-				</a>   
-				</li>
+					<li>
+						{{ $client->name }}  
+					</li>
+				</a> 
 			@endforeach    
 		</ul>
 	@else 

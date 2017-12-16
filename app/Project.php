@@ -16,4 +16,8 @@ class Project extends Model
         $this->comments()->create(compact('body', 'user_id'));
     }
 
+    public function tasks() {
+        return $this->hasMany(Task::class);
+    }
+
 }

@@ -21,7 +21,8 @@ class CreateTasksTable extends Migration {
             $table->string('deadline');
             $table->string('importance');
             $table->integer('status');
-            $table->integer('level_of_effort');
+            // $table->integer('level_of_effort');
+            $table->string('assigned_by')->nullable();
             $table->timestamps();
         });
     }

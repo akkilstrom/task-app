@@ -47,7 +47,7 @@ class TasksController extends Controller {
             'deadline'          => 'required',
             'project_id'        => 'required',
             'status'            => 'required',
-            'level_of_effort'   => 'required',
+            // 'level_of_effort'   => 'required',
             //ADD ALL THE INPUTS THAT SHALL BE REQUIRED
         ]);
 
@@ -60,8 +60,8 @@ class TasksController extends Controller {
                 'importance', 
                 'deadline', 
                 'project_id',
-                'status',
-                'level_of_effort'
+                'status'
+                // 'level_of_effort'
             ]))
         );
 
