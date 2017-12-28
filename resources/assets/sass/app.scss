@@ -22,6 +22,6 @@
 }
 
 // Tablet landscape, desktops
-// @media screen and (min-width: 1024px) { 
-//     @import "desktop";
-// }
+@media screen and (min-width: 1024px) { 
+    @import "desktop";
+}

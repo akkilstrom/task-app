@@ -108,7 +108,7 @@ class TasksController extends Controller {
         return redirect( '/tasks' );
     }
 
-    
+    // Function to delete task
     public function destroy($id) {
 
         Task::findOrFail($id)->delete();

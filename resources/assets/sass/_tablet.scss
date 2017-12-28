@@ -1,3 +1,15 @@
+body {
+    font-size: $font-size-larger;
+}
+
+h1 {
+	font-size: $font-size-h1-larger;
+}
+
+h2 {
+	font-size: $font-size-h2-larger;
+}
+
 header {
     height: 6rem;
 
@@ -52,13 +64,6 @@ button {
 	min-width: 100%;
 }
 
-.icon-btn {
-    // justify-content: space-around;
-
-	.btn-txt {
-        // padding-left: 0;
-    }
-}
 
 
     

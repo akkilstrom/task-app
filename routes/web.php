@@ -4,10 +4,9 @@
 |-------------------------------------------------------------------------------
 | Web Routes
 |-------------------------------------------------------------------------------
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group.
-|
+| 
+| Here is the web routes for the application. These routes are loaded by the 
+| RouteServiceProvider within a group which contains the "web" middleware group.
 */
 
 // HOME ROUTES
@@ -32,6 +31,7 @@ Route::get('/clients/create', 'ClientsController@create');
 Route::post('/clients', 'ClientsController@store');
 Route::get('/clients/{client}', 'ClientsController@show');
 
+// TASK ROUTES
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/create', 'TasksController@create');
 Route::post('/tasks', 'TasksController@store');
@@ -39,14 +39,8 @@ Route::get('/tasks/{task}', 'TasksController@show');
 Route::post('/tasks/{task}', 'TasksController@update');
 Route::put('/tasks/{id}', 'TasksController@update')->name('tasks.update');
 Route::delete('/tasks/{task}/destroy', 'TasksController@destroy')->name('tasks.destroy');
-
-
 Route::get('/tasks/tags/{tag}', 'TagsController@index');
 Route::post('/tasks/{task}/comments', 'CommentsController@store');
 
 // AUTH ROUTES
 Auth::routes();
-
-// Middleware to make sure that you have to login to visit certain pages
-//Route::group(['middleware' => 'auth'], function() {
-//});

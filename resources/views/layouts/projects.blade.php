@@ -10,7 +10,6 @@
 				</a>   
 			</div>
 			<div class="client-column">
-				{{-- <a href="#">Client here</a> --}}
 				@if($project->client)
 					<a href='/clients/{{$project->client->id}}'> 
 						{{ $project->client->name }}

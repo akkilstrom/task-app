@@ -22,6 +22,14 @@ h1, h2 {
     font-weight: lighter;
 }
 
+h1 {
+    font-size: $font-size-h1-base;
+}
+
+h2 {
+    font-size: $font-size-h2-base;
+}
+
 a, .nav-link {
     color: $text-color-body;
     text-decoration: none;
@@ -127,6 +135,10 @@ main {
     flex: 1 0 auto;
 }
 
+.success-container, .error-container {
+    padding-bottom: 2rem;
+}
+
 .success-container {
     color: $success-color;
 }
@@ -134,7 +146,7 @@ main {
 .success-container-center {
     @extend .success-container;
     text-align: center;
-    padding-bottom: 2rem;
+    // padding-bottom: 2rem;
 }
 
 .error-container {
@@ -144,7 +156,6 @@ main {
 .error-container-center {
     @extend .error-container;
     text-align: center;
-    padding-bottom: 2rem;
 }
 
 .login-content, .register-content {
@@ -198,7 +209,6 @@ main {
     padding: 0.5rem 0;
     font-weight: 700;
     height: 8rem;
-    // border: 1px solid red;
 }
 
 .project-column, .client-column {
@@ -270,8 +280,6 @@ main {
    fill: $success-color;
 }
 
-
-
 /*------------------------------------------------------------------------------
     FOOTER BLADE STYLING
 ------------------------------------------------------------------------------*/
@@ -298,7 +306,6 @@ footer {
     }
 
     h3, h4  {
-        // padding: 0;
         margin-bottom: 0;
     }
 

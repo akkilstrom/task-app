@@ -495,7 +495,7 @@ button {
 }
 
 button:hover {
-  color: #EA7D1E;
+  background-color: #EA7D1E;
 }
 
 .icon-btn {
@@ -515,8 +515,9 @@ button:hover {
   padding: 0.5rem 1.2rem;
 }
 
-.icon-btn:hover .icon-btn {
-  fill: #EA7D1E;
+.icon-btn:hover {
+  background-color: #EA7D1E;
+  /*$btn-hover-color;*/
 }
 
 .icon-btn .btn-txt {
@@ -531,6 +532,30 @@ button:hover {
 
 .trash-btn:hover {
   background-color: transparent;
+}
+
+.button-container {
+  width: 100%;
+  max-width: 50rem;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button-container .filter-btn {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 10rem;
+  margin: 0 0 1rem 0;
 }
 
 /*------------------------------------------------------------------------------
@@ -568,6 +593,14 @@ body {
 h1,
 h2 {
   font-weight: lighter;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
 }
 
 a,
@@ -721,13 +754,19 @@ main {
 }
 
 .success-container,
+.success-container-center,
+.error-container,
+.error-container-center {
+  padding-bottom: 2rem;
+}
+
+.success-container,
 .success-container-center {
   color: #2ab27b;
 }
 
 .success-container-center {
   text-align: center;
-  padding-bottom: 2rem;
 }
 
 .error-container,
@@ -737,7 +776,6 @@ main {
 
 .error-container-center {
   text-align: center;
-  padding-bottom: 2rem;
 }
 
 .login-content,
@@ -973,6 +1011,18 @@ footer a {
 }
 
 @media screen and (min-width: 800px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
   header {
     height: 6rem;
   }
@@ -1038,6 +1088,16 @@ footer a {
   .reg-btn,
   .login-btn {
     min-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*------------------------------------------------------------------------------
+    FORMS-STYLING DESKTOP
+------------------------------------------------------------------------------*/
+
+  .filter-btn {
+    margin: 0 0 2rem 0;
   }
 }
 

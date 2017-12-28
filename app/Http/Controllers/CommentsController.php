@@ -21,6 +21,8 @@ class CommentsController extends Controller {
         $user_id = auth()->user()->id;
         $task->addComment(request('body'), $user_id);
 
+        session()->flash( 'message', 'Your comment has been posted.' );
+
         return back();
     }
 }

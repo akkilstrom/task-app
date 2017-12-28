@@ -56,7 +56,8 @@ button {
 
     &:hover {
         // background-color: $btn-hover-color;
-        color: $accent-color;
+        background-color: $accent-color;
+        // color: $accent-color;
     }
 }
 
@@ -68,11 +69,12 @@ button {
     padding: 0.5rem 1.2rem;
 
     &:hover {
+        background-color: $accent-color; /*$btn-hover-color;*/
         .icon-btn {
-            fill: $accent-color;
+            // fill: $accent-color;
         }
     }
-    
+
     .btn-txt {
         padding-left: 1rem;
     }
@@ -88,20 +90,18 @@ button {
     }
 }
 
-// .radio, {
-//     display: block;
-// }
+.button-container {
+    width: 100%;
+    max-width: 50rem;
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row wrap;
+    // align-content: space-between;
+    justify-content: space-between;
 
-
-// textarea {
-//     text-rendering: auto;
-//     overflow: auto;
-//     resize: vertical;
-//     touch-action: manipulation;
-//     white-space: pre-wrap;
-//     word-wrap: break-word;
-// }
-
-// button, input, select, textarea {
-//     margin: 0;
-// }
+    .filter-btn {
+        flex-grow: 1;
+        max-width: 10rem;
+        margin: 0 0 1rem 0;
+    }
+}

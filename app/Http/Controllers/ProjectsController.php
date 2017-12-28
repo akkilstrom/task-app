@@ -47,22 +47,19 @@ class ProjectsController extends Controller {
 
         session()->flash( 'message', 'Your project has been added.' );
 
-        return redirect( '/projects' );
+        return redirect( '/' );
     }
 
     
     public function show(Project $project) {
-        // $tasks = Task::find($project->id);
         $tasks = $project->tasks;
-        // echo '<pre>',print_r($tasks),'</pre>';
-        // return view( 'projects.show', compact('project') );
         return view( 'projects.show', [
             'project'   => $project,
             'tasks'     => $tasks
         ]);
     }
 
-
+    // Function to edit project
     public function edit(Project $project) {
         $selectedClient = Client::find($project->client_id);
         $allClients = Client::All();
@@ -74,7 +71,7 @@ class ProjectsController extends Controller {
         ]);
     }
 
-    
+    // Function to uptade project when edit has been made
     public function update(Request $request, $id) {
         $this->validate($request, [
             'name'          => 'required',
@@ -91,7 +88,7 @@ class ProjectsController extends Controller {
         return redirect( '/projects' );
     }
 
-    
+    // Function to delete project
     public function destroy($id) {
 
         Project::findOrFail($id)->delete();
