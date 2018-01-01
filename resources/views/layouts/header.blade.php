@@ -35,17 +35,17 @@
         </header><!-- / if guest-->
                 @else 
                 <nav class="nav" role="navigation">
-                    <a class="nav-item" href="/">
+                    <a class="nav-item {{ $nav_dashboard or ''  }}" href="/">
                         @include( 'icons.home' )
                         <br>
                         <span class="nav-txt">Dashboard</span>
                     </a>
-                    <a class="nav-item" href="/projects">
+                    <a class="nav-item {{ $nav_projects or ''  }}" href="/projects">
                         @include( 'icons.project' )
                         <br>
                         Projects
                     </a>
-                    <a class="nav-item" href="/clients">
+                    <a class="nav-item {{ $nav_clients or ''  }}" href="/clients">
                         @include( 'icons.client' )
                         <br>
                         Clients

@@ -25,9 +25,7 @@ class HomeController extends Controller {
     public function index(Project $project) {   
 
         $projects = Project::whereUserId(Auth::id())->get();
-        // $matchingClient = Client::find($project->client_id);
         $matchingClient = $project->client;
-        // dd($matchingClient);
         $loggedInUserId = Auth::id();
 
         return view( '/home', [

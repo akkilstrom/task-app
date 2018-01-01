@@ -36,8 +36,7 @@
             <select id="status" name="status" class="form-control" required> <!--Supplement an id here instead of using 'name'-->
                 <option value="0">To do</option> 
                 <option value="1">In progress</option> 
-                <option value="2">In review</option> 
-                <option value="3">Done</option> 
+                <option value="2">Done</option> 
             </select>
         </div>
 

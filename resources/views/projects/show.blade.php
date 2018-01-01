@@ -1,8 +1,14 @@
 @extends( 'layouts.master' )
 
 @section( 'content' )
-
-    <h1>Taskboard of {{ $project->name }}</h1>
+    <div class="header-box">
+        <h1>Tasks of {{ $project->name }}</h1>
+        @if( $loggedInUserId == $project->user_id )
+            <a class="add-btn" href="/tasks/create">
+			@include( 'icons.large_plus' )
+		</a>
+		@endif
+    </div>
     <section class="button-container">
         <button class="filter-btn">
 			{{-- @include( 'icons.plus' ) --}}

@@ -5,13 +5,13 @@
 	@foreach ($projects as $project)
 		<div class="project-divider">
 			<div class="project-column">
-				<a href='/projects/{{$project->id}}'> 
+				<a href="/projects/{{$project->id}}"> 
 					{{ $project->name }}
 				</a>   
 			</div>
 			<div class="client-column">
 				@if($project->client)
-					<a href='/clients/{{$project->client->id}}'> 
+					<a href="/clients/{{$project->client->id}}"> 
 						{{ $project->client->name }}
 					</a> 
 				@endif

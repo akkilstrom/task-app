@@ -42,7 +42,21 @@ a, .nav-link {
 }
 
 .icon {
-    fill: #fff;
+    fill: $btnlink-color;
+}
+
+.icon-reverse {
+    fill: $text-color-body;
+    cursor: pointer;
+    &:hover {
+        .icon-reverse {
+            fill: $accent-color;
+        }
+    }
+}
+
+ul {
+    margin: 0;
 }
 
 .list-unstyled {
@@ -72,31 +86,30 @@ header {
     .header-content {
         width: 90%;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column nowrap;
         justify-content: center;
         
         .logo-container {
             display: flex;
-            // flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
+            width:100%;
     
             .logo {
                 margin: 0;
                 font-family: $font-family-logo;
                 letter-spacing: 0.1rem;
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
         }
     
         nav {
+            margin-top: 1rem;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
-            align-content: space-between;
-            flex-grow: 2;
+            width:100%;
         }
 
         .nav-item, .footer-item {
@@ -119,8 +132,17 @@ header {
             }
         }
 
+        .active {
+            color: $accent-color;
+            
+            .icon {
+                    fill: $accent-color;
+            }
+        }
+
         .nav-logged-out {
-            justify-content: flex-end;
+            margin-top: 1rem;
+            justify-content: center;
         }
     } 
 }
@@ -135,6 +157,14 @@ main {
     flex: 1 0 auto;
 }
 
+.header-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    // border: 1px solid red;
+    align-items: center;
+}
+
 .success-container, .error-container {
     padding-bottom: 2rem;
 }
@@ -146,7 +176,6 @@ main {
 .success-container-center {
     @extend .success-container;
     text-align: center;
-    // padding-bottom: 2rem;
 }
 
 .error-container {
@@ -164,7 +193,6 @@ main {
     align-items: center;
     justify-content: center;
     align-content: center;
-    // margin-bottom: 2rem;
 }
 
 .login-container, .reg-container {
@@ -188,10 +216,11 @@ main {
 
 .profile-img {
     width: 90%;
+    border-top: 50%;
     max-width: 10rem;
     height: 12rem;
     margin-right: 2rem;
-    background-color: $border-color; 
+    background-color: $head-foot-color; 
 }
 
 .projects-container {
@@ -201,14 +230,13 @@ main {
 
 .project-divider {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-content: center;
     border-bottom: 1px solid $border-color;
     padding: 0.5rem 0;
     font-weight: 700;
-    height: 8rem;
 }
 
 .project-column, .client-column {
@@ -222,17 +250,9 @@ main {
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    width: 25%;
+    width: 15%;
     max-width: 5rem;
-
-    .edit-btn, .trash-btn {
-
-        &:hover {
-            .icon-smaller {
-                fill: $accent-color;
-            }
-        }
-    }
+    min-width: 5rem;
 }
 
 /*------------------------------------------------------------------------------
@@ -245,6 +265,7 @@ main {
     align-items: center;
     justify-content: space-between;
     align-content: center;
+    margin-top: 2rem;
 }
 
 .task-card {

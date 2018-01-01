@@ -1,3 +1,5 @@
+<?php $nav_dashboard = 'active'; ?>
+
 @extends('layouts.master')
 
 @section('content')

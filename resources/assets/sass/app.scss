@@ -17,11 +17,11 @@
 @import "base";
 
 // Mobile landscape, tablets
-@media screen and (min-width:800px) { 
+@media screen and (min-width:700px) { 
     @import "tablet";
 }
 
 // Tablet landscape, desktops
-@media screen and (min-width: 1024px) { 
+@media screen and (min-width: 870px) { 
     @import "desktop";
 }

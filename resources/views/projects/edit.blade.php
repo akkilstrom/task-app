@@ -1,3 +1,5 @@
+<?php $nav_projects = 'active'; ?>
+
 @extends( 'layouts.master' )
 
 @section( 'content' )

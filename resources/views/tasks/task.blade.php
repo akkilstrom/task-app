@@ -14,7 +14,7 @@
                     @break
                 
                 {{-- ändra till 2 och ta bort in review --}}
-                @case(3) 
+                @case(2) 
                     @include( 'icons.done' )
                     @break
             @endswitch

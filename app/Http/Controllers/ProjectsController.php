@@ -50,12 +50,15 @@ class ProjectsController extends Controller {
         return redirect( '/' );
     }
 
-    
+    // Function to show the chosen project
     public function show(Project $project) {
+        $loggedInUserId = Auth::id();
         $tasks = $project->tasks;
+
         return view( 'projects.show', [
-            'project'   => $project,
-            'tasks'     => $tasks
+            'project'           => $project,
+            'tasks'             => $tasks,
+            'loggedInUserId'    => $loggedInUserId,
         ]);
     }
 

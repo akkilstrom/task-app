@@ -9,7 +9,7 @@
             </div>
             <div class="footer-item">
                 <h4>Navigation</h4>
-                <a href="/">Home</a> |
+                <a href="/">Dashboard</a> |
                 <a href="/projects">Projects</a> |
                 <a href="/clients">Clients</a>
             </div>

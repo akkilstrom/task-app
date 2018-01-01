@@ -1,3 +1,5 @@
+<?php $nav_clients = 'active'; ?>
+
 @extends( 'layouts.master' )
 
 @section( 'content' )
