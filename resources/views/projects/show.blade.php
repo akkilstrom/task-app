@@ -9,12 +9,21 @@
 		</a>
 		@endif
     </div>
-    <section class="button-container">
-        <button class="filter-btn">
-			{{-- @include( 'icons.plus' ) --}}
+    {{-- <section class="button-container"> --}}
+        <a class="filter-btn" href="#">
 			<span class="btn-txt">All</span>
-		</button>
-        <button class="filter-btn">
+		</a> |
+        <a class="filter-btn" href="#">
+			<span class="btn-txt">To do</span>
+		</a> |
+        <a class="filter-btn" href="#">
+			<span class="btn-txt">In progress</span>
+		</a> |
+        <a class="filter-btn" href="#">
+			<span class="btn-txt">Done</span>
+		</a>
+
+        {{-- <button class="filter-btn">
 			<span class="btn-txt">To do</span>
 		</button>
         <button class="filter-btn">
@@ -22,8 +31,8 @@
 		</button>
         <button class="filter-btn">
 			<span class="btn-txt">Done</span>
-		</button>
-    </section>
+		</button> --}}
+    {{-- </section> --}}
 
 	<section class="tasks-container">
     @if($tasks)

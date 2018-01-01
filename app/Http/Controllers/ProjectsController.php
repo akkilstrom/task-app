@@ -55,6 +55,24 @@ class ProjectsController extends Controller {
         $loggedInUserId = Auth::id();
         $tasks = $project->tasks;
 
+        // switch($status) {
+        //     // TO DO
+        //     case '0' :
+        //         $tasks = $project->tasks;
+        //         break;
+        //     // IN PROGRESS
+        //     case '1' :
+        //         $tasks = $project->tasks;
+        //         break;
+        //     // DONE
+        //     case '2' :
+        //         $tasks = $project->tasks;
+        //         break;
+        //     default :
+        //         $tasks = $project->tasks;
+        //         // $tasks = Task::latest()->get();
+        // }
+
         return view( 'projects.show', [
             'project'           => $project,
             'tasks'             => $tasks,
