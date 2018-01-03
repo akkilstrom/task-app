@@ -1,8 +1,6 @@
 <article class="task-card">
     <div class="task-header">
-        <h2>
-            <a href="/tasks/{{ $task->id }}">{{ $task->task }}</a>
-        </h2>
+        <h2> {{ $task->task }}</h2>
         <div class="status-container">
             @switch($task->status)
                 @case(0)
@@ -13,7 +11,6 @@
                     @include( 'icons.progress' )
                     @break
                 
-                {{-- ändra till 2 och ta bort in review --}}
                 @case(2) 
                     @include( 'icons.done' )
                     @break
@@ -22,13 +19,13 @@
     </div>
     
     <p class="task-meta">
-        {{-- Client: {{ $client->name }} <br> --}}
-        <a href="#">{{ $task->user->name }}</a> on
+        <b>Client:</b> client name here <br>
+        <b>Created by:</b> {{ $task->user->name }} on
         {{ $task->created_at->toFormattedDateString() }} 
     </p>
     <p class="task-meta">
-        Priority: {{ $task->importance }} <br>
-        Deadline: {{ $task->deadline }} <br>
+        <b>Priority: </b>{{ $task->importance }} <br>
+        <b>Deadline: </b>{{ $task->deadline }} <br>
 
         @if(count($task->tags))
             Tags:
@@ -37,7 +34,11 @@
             @endforeach
         @endif
     </p>
-    <p> {{ $task->description }}</p>
+    @if('projects.show')
+        <a class="task-meta" href="/tasks/{{ $task->id }}">Read more</a>    
+    @elseif('tasks.show')
+        <p> {{ $task->description }}</p>
+    @endif
 </article><!-- /.task-card -->
 
     

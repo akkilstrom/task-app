@@ -43,3 +43,13 @@ Route::post('/tasks/{task}/comments', 'CommentsController@store');
 
 // AUTH ROUTES
 Auth::routes();
+
+Route::get('skills', function() {
+	return ['Laravel', 'PHP', 'Vue', 'JavaScript' ];
+});
+
+
+
+Route::get('api/tasks', function () {
+    // Only authenticated users may enter...
+})->middleware('auth.basic');

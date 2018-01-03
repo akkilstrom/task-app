@@ -444,7 +444,6 @@ th {
 
 form {
   max-width: 600px;
-  padding-top: 2rem;
 }
 
 .delete-form {
@@ -521,15 +520,24 @@ button:hover {
   padding-left: 1rem;
 }
 
+.icon-btn-small {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-top: 0;
+}
+
+.icon-btn-small svg {
+  margin-top: 0.5rem;
+}
+
 .edit-btn,
-.trash-btn,
-.add-btn {
+.trash-btn {
   fill: #2c3e50;
 }
 
 .edit-btn:hover .icon-dark,
-.trash-btn:hover .icon-dark,
-.add-btn:hover .icon-dark {
+.trash-btn:hover .icon-dark {
   fill: #EA7D1E;
 }
 
@@ -541,28 +549,6 @@ button:hover {
 
 .trash-btn:hover {
   background-color: transparent;
-}
-
-.button-container {
-  width: 100%;
-  max-width: 50rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-
-.button-container .filter-btn {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  max-width: 6rem;
-  margin: 0 0.5rem 0.5rem 0;
-  font-size: 0.8rem;
-  height: 2.5rem;
 }
 
 /*------------------------------------------------------------------------------
@@ -598,16 +584,21 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: lighter;
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 a,
@@ -783,14 +774,21 @@ main {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 30rem;
+}
+
+.header-box a {
+  text-transform: uppercase;
 }
 
 .success-container,
@@ -951,7 +949,7 @@ main {
 }
 
 .task-card {
-  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .task-card .task-meta {
@@ -1057,8 +1055,12 @@ footer a {
     font-size: 1.4rem;
   }
 
+  h3 {
+    font-size: 1.2rem;
+  }
+
   header {
-    height: 6rem !important;
+    height: 6rem;
   }
 
   .header-content {
@@ -1084,11 +1086,18 @@ footer a {
 
   .header-content nav {
     width: 65% !important;
-    max-width: 30rem;
+    max-width: 40rem !important;
+    margin-top: 0 !important;
   }
 
   .header-content nav .nav-item {
     font-size: 1rem;
+  }
+
+  .header-content .nav-logged-out {
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
   }
 
   .project-divider {

@@ -1,39 +1,29 @@
 @extends( 'layouts.master' )
 
 @section( 'content' )
+    <h1>Tasks of {{ $project->name }}</h1>
+        
     <div class="header-box">
-        <h1>Tasks of {{ $project->name }}</h1>
+        <a href="/projects/{project}?{{$status='all'}}">
+            <b class="btn-txt">All</b>
+        </a> |
+        <a href="#">
+            <b class="btn-txt">To do</b>
+        </a> |
+        <a href="#">
+            <b class="btn-txt">In progress</b>
+        </a> |
+        <a href="#">
+            <b class="btn-txt">Done</b>
+        </a>
         @if( $loggedInUserId == $project->user_id )
-            <a class="add-btn" href="/tasks/create">
-			@include( 'icons.large_plus' )
-		</a>
-		@endif
+            <a href="/tasks/create">
+                <button class="icon-btn-small">
+                    @include( 'icons.plus' )
+                </button>
+            </a>
+        @endif
     </div>
-    {{-- <section class="button-container"> --}}
-        <a class="filter-btn" href="#">
-			<span class="btn-txt">All</span>
-		</a> |
-        <a class="filter-btn" href="#">
-			<span class="btn-txt">To do</span>
-		</a> |
-        <a class="filter-btn" href="#">
-			<span class="btn-txt">In progress</span>
-		</a> |
-        <a class="filter-btn" href="#">
-			<span class="btn-txt">Done</span>
-		</a>
-
-        {{-- <button class="filter-btn">
-			<span class="btn-txt">To do</span>
-		</button>
-        <button class="filter-btn">
-			<span class="btn-txt">In progress</span>
-		</button>
-        <button class="filter-btn">
-			<span class="btn-txt">Done</span>
-		</button> --}}
-    {{-- </section> --}}
-
 	<section class="tasks-container">
     @if($tasks)
         @foreach( $tasks as $task )

@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-weight: lighter;
 }
 
@@ -27,6 +27,10 @@ h1 {
 }
 
 h2 {
+    font-size: $font-size-h2-base;
+}
+
+h3 {
     font-size: $font-size-h2-base;
 }
 
@@ -159,10 +163,15 @@ main {
 
 .header-box {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
-    // border: 1px solid red;
     align-items: center;
+    box-sizing: border-box;
+    max-width: 30rem;
+
+    a {
+        text-transform: uppercase;
+    }
 }
 
 .success-container, .error-container {
@@ -270,10 +279,11 @@ main {
 
 .task-card {
     @extend .login-container;
-    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 
     .task-meta {
         font-size:0.8rem;
+        // margin-top: 0;
     }
 }
 
