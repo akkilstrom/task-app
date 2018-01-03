@@ -4,9 +4,13 @@
     <h1>Tasks of {{ $project->name }}</h1>
         
     <div class="header-box">
-        <a href="/projects/{project}?{{$status='all'}}">
+        {{-- <a href="/projects/{project}?{{$status='all'}}"> --}}
+        {{-- <a href="/projects/{project}?status={{ $status['null'] }}"> --}}
+        <a href="#">
             <b class="btn-txt">All</b>
         </a> |
+        {{-- <a href="/projects/{project}?{{$status=0}}"> --}}
+        {{-- <a href="/projects/{project}?status={{ $status('todo') }}"> --}}
         <a href="#">
             <b class="btn-txt">To do</b>
         </a> |

@@ -22,3 +22,7 @@ Route::get('api/tasks', function (Request $request) {
     return $request->user();
 })->middleware('auth.basic');
 
+// Route::get('api/tasks', function () {
+//     return ['laravel', 'testing'];
+// })->middleware('auth.basic');
+

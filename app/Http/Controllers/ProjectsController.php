@@ -57,23 +57,32 @@ class ProjectsController extends Controller {
         $status = '';
         $filtered = '';
 
-        switch($status) {
-            // TO DO 0
-            case 'todo' :
-                $filtered = $tasks->where('status', 0 )->get();
-                break;
-            // IN PROGRESS 1
-            case 'progress' :
-                $filtered = $tasks->where('status', 1 )->get();
-                break;
-            // DONE 2
-            case 'done' :
-                $filtered = $tasks->where('status', 2 )->get();
-                break;
-            case 'all' :
-                $tasks = $project->tasks;
-                // $tasks = Task::latest()->get();
-        }
+        // switch($status) {
+        //     // TO DO 0
+        //     case 'todo' :
+        //         $filtered = $tasks->where('status', 0 )->get();
+        //         break;
+        //     // IN PROGRESS 1
+        //     case 'progress' :
+        //         $filtered = $tasks->where('status', 1 )->get();
+        //         break;
+        //     // DONE 2
+        //     case 'done' :
+        //         $filtered = $tasks->where('status', 2 )->get();
+        //         break;
+        //     // ALL TASKS
+        //     default :
+        //         $tasks = $project->tasks;
+        //         // $tasks = Task::latest()->get();
+        // }
+
+        // if (request('todo') {
+        //     $tasks = Task::where('status', 0)->get();
+        // } elseif(request('progress') {
+        //     $tasks = Task::where('status', 1)->get();
+        // } elseif(request('done') {
+        //     $tasks = Task::where('status', 2)->get();
+        // }
 
         return view( 'projects.show', [
             'project'           => $project,
