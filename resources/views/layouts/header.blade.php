@@ -10,6 +10,7 @@
         {{--  <link rel="icon" href="../../../../favicon.ico">  --}}
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>
 
         <title>The Taskboard admin</title>
         <!-- Custom styles for this template -->

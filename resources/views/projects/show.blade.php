@@ -7,6 +7,7 @@
         {{-- <a href="/projects/{project}?{{$status='all'}}"> --}}
         {{-- <a href="/projects/{project}?status={{ $status['null'] }}"> --}}
         <a href="#">
+        {{-- <a href="{{ route('projects.show', ['sort' => 'status' => 'asc']) }}"> --}}
             <b class="btn-txt">All</b>
         </a> |
         {{-- <a href="/projects/{project}?{{$status=0}}"> --}}
@@ -37,18 +38,3 @@
     </section>
     
 @endsection
-
-{{-- @if( isset($archives) )
-        <div class="aside-item">
-            <h4>Tasks archives</h4>
-            <ol class="list-unstyled">
-                @foreach($archives as $stats)
-                    <li>
-                        <a href="/tasks?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
-                            {{ $stats['month'] . ' ' . $stats['year'] }}
-                        </a>
-                    </li>
-                @endforeach
-            </ol>
-        </div>
-    @endif --}}

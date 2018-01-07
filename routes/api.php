@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
-
+Use App\Project;
+Use App\Client;
+Use App\Task;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,12 +19,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('projects', function (Project $project) {
+    return Project::all();
+});
 
-Route::get('api/tasks', function (Request $request) {
-    return $request->user();
-})->middleware('auth.basic');
+Route::get('projects/{project}', function (Project $project) {
+    return $project;
+});
 
-// Route::get('api/tasks', function () {
-//     return ['laravel', 'testing'];
-// })->middleware('auth.basic');
+Route::get('clients', function (Client $client) {
+    return Client::all();
+});
+
+Route::get('tasks', function (Task $task) {
+    return Task::all();
+});
 

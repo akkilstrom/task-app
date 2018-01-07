@@ -55,7 +55,15 @@ class ProjectsController extends Controller {
         $loggedInUserId = Auth::id();
         $tasks = $project->tasks;
         $status = '';
-        $filtered = '';
+        // $filtered = '';
+        $filtered = $tasks->where('status', 'todo' )->get();
+        // $sortBy = isset( $request->sort ) ? $request->sort : 'created_at';
+
+        // $sort = isset( $request->direction ) ? $request->direction : 'desc';
+
+        // $tasks = Project::orderBy($sortBy, $sort)->paginate(20);
+
+        // return view('projects.show', ['products' => $products]);
 
         // switch($status) {
         //     // TO DO 0

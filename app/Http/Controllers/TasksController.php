@@ -7,11 +7,11 @@ use App\Task;
 use App\Project;
 
 class TasksController extends Controller {
-    public function __construct() {
-        // you must be signed in to create & store a post. 
-        $this->middleware('auth');
-        // ->except(['index', 'show']);Guests can see the posts
-    }
+    // public function __construct() {
+    //     // you must be signed in to create & store a post. 
+    //     $this->middleware('auth');
+    //     // ->except(['index', 'show']);Guests can see the posts
+    // }
 
     public function index() {
         if (request(['month', 'year'])) {

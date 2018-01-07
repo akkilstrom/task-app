@@ -23,6 +23,7 @@
   "dependencies": {
     "@webcomponents/custom-elements": "^1.0.0",
     "clarity-icons": "^0.10.15",
+    "marked": "^0.3.9",
     "normalize.scss": "^0.1.0"
   }
 }
