@@ -55,16 +55,12 @@ class ProjectsController extends Controller {
         $loggedInUserId = Auth::id();
         $tasks = $project->tasks;
         $status = '';
-        // $filtered = '';
-        $filtered = $tasks->where('status', 'todo' )->get();
+        $filtered = '';
+        // $filtered = $tasks->where('status', 'todo' )->get();
         // $sortBy = isset( $request->sort ) ? $request->sort : 'created_at';
-
         // $sort = isset( $request->direction ) ? $request->direction : 'desc';
-
         // $tasks = Project::orderBy($sortBy, $sort)->paginate(20);
-
         // return view('projects.show', ['products' => $products]);
-
         // switch($status) {
         //     // TO DO 0
         //     case 'todo' :
@@ -84,11 +80,11 @@ class ProjectsController extends Controller {
         //         // $tasks = Task::latest()->get();
         // }
 
-        // if (request('todo') {
+        // if ( request(status == 0) ) {
         //     $tasks = Task::where('status', 0)->get();
-        // } elseif(request('progress') {
+        // } elseif( request(status == 1) ) {
         //     $tasks = Task::where('status', 1)->get();
-        // } elseif(request('done') {
+        // } elseif( request(status == 2) ) {
         //     $tasks = Task::where('status', 2)->get();
         // }
 

@@ -7,11 +7,11 @@
         {{-- <a href="/projects/{project}?{{$status='all'}}"> --}}
         {{-- <a href="/projects/{project}?status={{ $status['null'] }}"> --}}
         <a href="#">
-        {{-- <a href="{{ route('projects.show', ['sort' => 'status' => 'asc']) }}"> --}}
             <b class="btn-txt">All</b>
         </a> |
         {{-- <a href="/projects/{project}?{{$status=0}}"> --}}
-        {{-- <a href="/projects/{project}?status={{ $status('todo') }}"> --}}
+        {{-- <a href="/projects/{project}?status={{ $status(0) }}"> --}}
+        {{-- <a href="{{ route('projects.show', ['tasks' => 'status' => 0]) }}"> --}}
         <a href="#">
             <b class="btn-txt">To do</b>
         </a> |
