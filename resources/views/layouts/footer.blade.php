@@ -28,5 +28,19 @@
     </footer>
 
     <script src="/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script>
+        
+        const filterBtn = $('.filter-btn').click(function() {
+            if(this.id == 'all') {
+                $('.task-card').fadeIn(450);
+            } else {
+                let $el = $('.' + this.id).fadeIn(450);
+                $('.task-card').not($el).hide();
+            }
+            
+        })
+        
+    </script>
 </body>
 </html>

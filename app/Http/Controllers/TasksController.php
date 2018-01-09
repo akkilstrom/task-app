@@ -7,11 +7,11 @@ use App\Task;
 use App\Project;
 
 class TasksController extends Controller {
-    // public function __construct() {
-    //     // you must be signed in to create & store a post. 
-    //     $this->middleware('auth');
-    //     // ->except(['index', 'show']);Guests can see the posts
-    // }
+    public function __construct() {
+        // you must be signed in to create & store a post. 
+        $this->middleware('auth');
+        // ->except(['index', 'show']);Guests can see the posts
+    }
 
     public function index() {
         if (request(['month', 'year'])) {
@@ -24,7 +24,12 @@ class TasksController extends Controller {
         }
 
         $archives = Task::archives();
+        $statuses = ['todo', 'in-progress', 'done'];
         return view( 'tasks.index', compact('tasks') );
+        //  return view( 'projects.index', [
+        //     'tasks'             => $tasks,
+        //     'statuses'          => $statuses
+        // ]);
     }
 
     public function show(Task $task) {
@@ -64,7 +69,7 @@ class TasksController extends Controller {
                 // 'level_of_effort'
             ]))
         );
-
+        
         session()->flash( 'message', 'Your task has been added.' );
         
         return redirect( '/tasks' );

@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
 
             // Adds the archive & tags (if they are associated with a card) 
             $view->with( compact('archives', 'tags') );
+            Schema::defaultStringLength(191);
         });
     }
 

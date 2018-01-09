@@ -11,11 +11,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>
-
         <title>The Taskboard admin</title>
-        <!-- Custom styles for this template -->
-        {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/clarity-icons/0.10.15/clarity-icons-lite.min.js" rel="stylesheet"> --}}
-        
         <link href="{{ url('/') }}/css/app.css" rel="stylesheet">
     </head>
     <body>

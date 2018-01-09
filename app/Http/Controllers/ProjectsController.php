@@ -54,46 +54,14 @@ class ProjectsController extends Controller {
     public function show(Project $project) {
         $loggedInUserId = Auth::id();
         $tasks = $project->tasks;
+        $statuses = ['todo', 'in-progress', 'done'];
         $status = '';
-        $filtered = '';
-        // $filtered = $tasks->where('status', 'todo' )->get();
-        // $sortBy = isset( $request->sort ) ? $request->sort : 'created_at';
-        // $sort = isset( $request->direction ) ? $request->direction : 'desc';
-        // $tasks = Project::orderBy($sortBy, $sort)->paginate(20);
-        // return view('projects.show', ['products' => $products]);
-        // switch($status) {
-        //     // TO DO 0
-        //     case 'todo' :
-        //         $filtered = $tasks->where('status', 0 )->get();
-        //         break;
-        //     // IN PROGRESS 1
-        //     case 'progress' :
-        //         $filtered = $tasks->where('status', 1 )->get();
-        //         break;
-        //     // DONE 2
-        //     case 'done' :
-        //         $filtered = $tasks->where('status', 2 )->get();
-        //         break;
-        //     // ALL TASKS
-        //     default :
-        //         $tasks = $project->tasks;
-        //         // $tasks = Task::latest()->get();
-        // }
-
-        // if ( request(status == 0) ) {
-        //     $tasks = Task::where('status', 0)->get();
-        // } elseif( request(status == 1) ) {
-        //     $tasks = Task::where('status', 1)->get();
-        // } elseif( request(status == 2) ) {
-        //     $tasks = Task::where('status', 2)->get();
-        // }
 
         return view( 'projects.show', [
             'project'           => $project,
             'tasks'             => $tasks,
             'loggedInUserId'    => $loggedInUserId,
-            'filtered'          => $filtered,
-            'status'            => $status
+            'statuses'          => $statuses
         ]);
     }
 

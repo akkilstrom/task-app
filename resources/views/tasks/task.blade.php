@@ -1,4 +1,7 @@
-<article class="task-card">
+<article class="task-card 
+@if(isset($statuses)) 
+    {{ $statuses[$task->status] }} 
+@endif">
     <div class="task-header">
         <h2> {{ $task->task }}</h2>
         <div class="status-container">
@@ -6,11 +9,9 @@
                 @case(0)
                     @include( 'icons.todo' )
                     @break
-
                 @case(1)
                     @include( 'icons.progress' )
                     @break
-                
                 @case(2) 
                     @include( 'icons.done' )
                     @break

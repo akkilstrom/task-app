@@ -5,7 +5,6 @@
 @section( 'content' )
 
     <h1>Add a client</h1>
-    <hr>
     <form method="POST" action="/clients">
         {{ csrf_field() }}
 
