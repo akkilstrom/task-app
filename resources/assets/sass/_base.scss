@@ -160,7 +160,7 @@ main {
     min-height: 40rem;
     flex: 1 0 auto;
 }
-
+//Change name
 .header-box {
     display: flex;
     flex-flow: row wrap;
@@ -168,6 +168,7 @@ main {
     align-items: center;
     box-sizing: border-box;
     max-width: 30rem;
+    border: 1px solid red;
 
     a {
         text-transform: uppercase;

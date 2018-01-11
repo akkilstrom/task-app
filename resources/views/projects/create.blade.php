@@ -5,7 +5,7 @@
 @section( 'content' )
 
     <h1>Add a project</h1>
-    <form method="POST" action="/projects">
+    <form method="POST" action="{{ url('/projects') }}">
         {{--  Protects your application from attacks. Generates a CSRF token for 
         each active user session --}}
         {{ csrf_field() }}

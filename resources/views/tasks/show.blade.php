@@ -24,6 +24,7 @@
         <a href="/login">Sign in to write a comment</a>
     @else
         <h3>Add a comment</h3>
+        <?php $commentTasks = '/tasks/' . $task->id . /comments; ?>
         <form action="/tasks/{{$task->id}}/comments" method="POST">
             {{ csrf_field() }}
             <div class="form-group">

@@ -5,7 +5,7 @@
 @section( 'content' )
 
     <h1>Add a client</h1>
-    <form method="POST" action="/clients">
+    <form method="POST" action="{{ url('/clients') }}">
         {{ csrf_field() }}
 
         {{--  Name  --}}

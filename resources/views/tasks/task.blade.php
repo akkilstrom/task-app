@@ -20,7 +20,7 @@
     </div>
     
     <p class="task-meta">
-        <b>Client:</b> client name here <br>
+        <b>Client:</b> Spotify <br>
         <b>Created by:</b> {{ $task->user->name }} on
         {{ $task->created_at->toFormattedDateString() }} 
     </p>
@@ -36,7 +36,8 @@
         @endif
     </p>
     @if('projects.show')
-        <a class="task-meta" href="/tasks/{{ $task->id }}">Read more</a>    
+        <?php $taskLink = '/tasks/' . $task->id; ?>
+        <a class="task-meta" href="{{ url($taskLink) }}">Read more</a>    
     @elseif('tasks.show')
         <p> {{ $task->description }}</p>
     @endif

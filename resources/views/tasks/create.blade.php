@@ -2,7 +2,7 @@
 
 @section( 'content' )
     <h1>Add a task</h1>
-    <form method="POST" action="/tasks">
+    <form method="POST" action="{{ url(/tasks) }}">
         {{--  Protects your application from attacks. Generates a CSRF token for 
         each active user session --}}
         {{ csrf_field() }}
@@ -53,15 +53,13 @@
         {{--  Importance  --}}
         <div class="radio">
             <label>
-                <input type="radio" name="importance" id="high" 
-                    value="high" checked>
+                <input type="radio" name="importance" id="high" value="high" checked>
                     High priority
             </label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" name="importance" id="low" 
-                    value="low">
+                <input type="radio" name="importance" id="low" value="low">
                 Low priority
             </label>
         </div>

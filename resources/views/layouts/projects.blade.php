@@ -3,22 +3,25 @@
 		<h2>Your projects</h2>
 	@endif
 	@foreach ($projects as $project)
+	<?php $projectLink = '/projects/' . $project->id; ?>
 		<div class="project-divider">
 			<div class="project-column">
-				<a href="/projects/{{$project->id}}"> 
+				<a href="{{ url($projectLink) }}"> 
 					{{ $project->name }}
 				</a>   
 			</div>
 			<div class="client-column">
 				@if($project->client)
-					<a href="/clients/{{$project->client->id}}"> 
+				<?php $clientOfProject = '/clients/' . $project->client->id; ?>
+					<a href="{{ url($clientOfProject) }}"> 
 						{{ $project->client->name }}
 					</a> 
 				@endif
 			</div>
 			<div class="edit-column">
 			@if( $loggedInUserId == $project->user_id )
-				<a class="edit-btn" href="/projects/{{$project->id}}/edit">
+				<?php $editProject = '/projects/' . $project->id .'/edit'; ?>
+				<a class="edit-btn" href="{{ url($editProject) }}">
 					@include( 'icons.edit' )
 				</a>
 				<form class="delete-form" action="{{ route('projects.destroy', ['id' => $project->id]) }}" 
@@ -33,7 +36,7 @@
 			</div>
 		</div>
 	@endforeach  
-	<a href="/projects/create">
+	<a href="{{ url('/projects/create') }}">
 		<button class="icon-btn">
 			@include( 'icons.plus' )
 			<span class="btn-txt">Add new</span>
