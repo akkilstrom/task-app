@@ -20,7 +20,7 @@
     </div>
     
     <p class="task-meta">
-        <b>Client:</b> Spotify <br>
+        {{--  <b>Client:</b> {{ }} <br>  --}}
         <b>Created by:</b> {{ $task->user->name }} on
         {{ $task->created_at->toFormattedDateString() }} 
     </p>

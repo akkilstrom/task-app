@@ -25,6 +25,7 @@ class TasksController extends Controller {
 
         $archives = Task::archives();
         $statuses = ['todo', 'in-progress', 'done'];
+        
         return view( 'tasks.index', compact('tasks') );
         //  return view( 'projects.index', [
         //     'tasks'             => $tasks,

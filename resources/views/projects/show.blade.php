@@ -10,12 +10,13 @@
         <a class='filter-btn' id='todo' href="#">
             <b class="btn-txt">To do</b>
         </a> 
-        <a class='filter-btn' id='progress' href="#">
+        <a class='filter-btn' id='in-progress' href="#">
             <b class="btn-txt">In progress</b>
         </a> 
         <a class='filter-btn' id='done' href="#">
             <b class="btn-txt">Done</b>
         </a>
+        {{--  Only project owner are able to add tasks to their own projects  --}}
         @if( $loggedInUserId == $project->user_id )
             <a href="{{ url('/tasks/create') }}">
                 <button class="icon-btn-small">

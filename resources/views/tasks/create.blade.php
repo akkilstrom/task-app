@@ -2,7 +2,7 @@
 
 @section( 'content' )
     <h1>Add a task</h1>
-    <form method="POST" action="{{ url(/tasks) }}">
+    <form method="POST" action="{{ url('/tasks') }}">
         {{--  Protects your application from attacks. Generates a CSRF token for 
         each active user session --}}
         {{ csrf_field() }}
@@ -25,6 +25,7 @@
             <label for="project_id">Project</label>
             <select id="project_id" name="project_id" class="form-control" required> <!--Supplement an id here instead of using 'name'-->
                 @foreach($projects as $project)
+                    {{--  Add selected if coming from project show blade  --}}
                     <option value="{{ $project->id }}">{{ $project->name }}</option> 
                 @endforeach
             </select>
