@@ -13,13 +13,6 @@
                 <a href="/projects">Projects</a> |
                 <a href="/clients">Clients</a>
             </div>
-            {{-- <div class="footer-item">
-                <h4>Elsewhere</h4>
-                <a href="#">GitHub</a> |
-                <a href="#">Instagram</a> |
-                <a href="#">Facebook</a>
-                </ol>
-            </div> --}}
         @endguest
         <div class="footer-item">
             <a href="#">@include( 'icons.arrow' )</a>

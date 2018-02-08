@@ -18,8 +18,7 @@
                 <hr>
             @endforeach
         </ul>
-    </div>
-    
+    </div>    
     @guest
         <a href="/login">Sign in to write a comment</a>
     @else

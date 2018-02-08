@@ -27,28 +27,20 @@ class User extends Authenticatable {
         'password', 'remember_token',
     ];
 
-    // public function cards() {
-    //     return $this->hasMany(Card::class);
-    // }
-
-    // public function publish(Card $card) {
-    //     // This cards save the given card
-    //     $this->cards()->save($card);
-    // }
-
     public function tasks() {
         return $this->hasMany(Task::class);
     }
 
+    // Saves the task
     public function publish(Task $task) {
-        // This cards save the given card
         $this->tasks()->save($task);
     }
 
+    //Add project to the user
     public function addProject(Project $project) {
         $this->tasks()->save($project);
     }
-
+    // The user an have many projects
     public function projects() {
         return $this->hasMany(Project::class);
     }

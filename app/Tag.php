@@ -6,6 +6,7 @@ namespace App;
 
 class Tag extends Model {
     
+    //Returns tags that belongs to task - A task can have many tags
     public function tasks() {
         return $this->belongsToMany(Task::class);
     }

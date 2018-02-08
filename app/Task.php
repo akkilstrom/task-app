@@ -45,7 +45,7 @@ class Task extends Model {
     }
 
     // Method that sets up a many to many relationship
-    // 1 card may have many tags
+    // 1 task may have many tags
     // Any tag may be applied to many posts
     public function tags() {
         return $this->belongsToMany(Tag::class);

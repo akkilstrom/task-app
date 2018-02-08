@@ -13,7 +13,6 @@ class CommentsController extends Controller {
     //     $this->middleware('auth');
     // }
     
-    // CHANGE TO TASK
     public function store(Task $task) {
 
         $this->validate(request(), ['body' => 'required|min:3']);

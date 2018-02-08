@@ -27,10 +27,10 @@
             <label for="project_id">Project</label>
             <select id="project_id" name="project_id" class="form-control" required> <!--Supplement an id here instead of using 'name'-->
                 @foreach($allProjects as $project)
-                    <option value="{{ $project->id }}">
+                    <option value="{{ $project->id }}"
 						@if($project->id === $selectedProject->id)
 							selected="selected" 
-						@endif
+						@endif>
 						{{ $project->name }}
 					</option> 
                 @endforeach

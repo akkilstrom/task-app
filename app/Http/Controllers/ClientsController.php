@@ -32,13 +32,11 @@ class ClientsController extends Controller {
     }
 
      public function show(Client $client) {
-        // return view( 'clients.show', compact('client') );
-
         $projectsOfClient = $client->projects;
+
         return view( 'clients.show', [
             'client'            => $client,
             'projectsOfClient'  => $projectsOfClient
         ]);
     }
-
 }

@@ -35,3 +35,6 @@ Route::get('tasks', function (Task $task) {
     return Task::all();
 });
 
+Route::put('/tasks/{id}', 'TasksController@update');
+
+

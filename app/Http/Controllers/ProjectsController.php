@@ -15,12 +15,9 @@ class ProjectsController extends Controller {
         $this->middleware('auth');
     }
 
-    
     public function index(Project $project) {
         $projects = Project::orderBy('name', 'asc')->with('client')->get();
         $loggedInUserId = Auth::id();
-        // dd($projects);
-        // $matchingClient = $project->client;
 
         return view( 'projects.index', [
             'projects'          => $projects,
@@ -28,13 +25,11 @@ class ProjectsController extends Controller {
         ]);
     }
 
-    
     public function create() {
         $clients = Client::All();
         return view( 'projects.create', compact('clients') );
     }
 
-    
     public function store() {
         $this->validate(request(), [
             'name'          => 'required',

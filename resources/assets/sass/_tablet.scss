@@ -14,38 +14,43 @@ h3 {
 	font-size: $font-size-h3-larger;
 }
 
+/*------------------------------------------------------------------------------
+    HEADER BLADE STYLING
+------------------------------------------------------------------------------*/
 header {
-    height: 6rem;
-}
-
-.header-content {
-	flex-flow: row nowrap !important;
-	justify-content: space-between !important;
-
-	.logo-container {
-		justify-content: flex-start !important;
-		width: 35% !important;
-
-		.logo {
-			font-size: 2rem;
+	height: 6rem;
+	.header-content {
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	
+		.logo-container {
+			justify-content: flex-start;
+			width: 35%;
+	
+			.logo {
+				font-size: 2rem;
+			}
+		}
+	
+		nav {
+			width: 65%;
+			max-width: 40rem;
+			margin-top: 0;
+	
+			.nav-item {
+				font-size: 1rem;
+			}
+		}
+	
+		.nav-logged-out {
+			justify-content: flex-end;
 		}
 	}
-
-	nav {
-		width: 65% !important;
-		max-width: 40rem !important;
-		margin-top: 0 !important;
-		// border: 1px solid green;
-
-		.nav-item {
-			font-size: 1rem;
-		}
-	}
-
-	.nav-logged-out {
-		justify-content: flex-end !important;
-	}
 }
+
+/*------------------------------------------------------------------------------
+    PROJECTS BLADE STYLING
+------------------------------------------------------------------------------*/
 
 .project-divider {
     align-items: center;
@@ -62,9 +67,17 @@ header {
 	width: 30%;
 }
 
-// .edit-column {
-//     width: 10%;
-// }
+
+/*------------------------------------------------------------------------------
+    TASK BLADE STYLING
+------------------------------------------------------------------------------*/
+.tasks-container {
+	justify-content: flex-start;
+}
+
+.task-card {
+	margin: 0 0.8rem 0.8rem 0;	
+}
 
 /*------------------------------------------------------------------------------
     FORMS-STYLING TABLET

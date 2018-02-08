@@ -73,7 +73,7 @@ hr {
     border: 0.5px solid $border-color;
 }
 /*------------------------------------------------------------------------------
-    HEADER BLADE
+    HEADER BLADE STYLING
 ------------------------------------------------------------------------------*/
 header {
     position: fixed;
@@ -151,11 +151,14 @@ header {
     } 
 }
 
+/*------------------------------------------------------------------------------
+    MAIN STYLING
+------------------------------------------------------------------------------*/
+
 main {
     position: relative;
     width: 90%;
-    // max-width: 60rem;
-    max-width: 1000px;
+    max-width: 70rem;
     padding: 10rem 0 5rem 0;
     min-height: 40rem;
     flex: 1 0 auto;
@@ -168,7 +171,6 @@ main {
     align-items: center;
     box-sizing: border-box;
     max-width: 30rem;
-    // border: 1px solid red;
 
     a {
         text-transform: uppercase;
@@ -214,6 +216,10 @@ main {
     margin-bottom: 3rem;
 }
 
+/*------------------------------------------------------------------------------
+    DASHBORD STYLING
+------------------------------------------------------------------------------*/
+
 .profile-container {
     width: 100%;
     max-width: 50rem;
@@ -233,6 +239,10 @@ main {
     background-color: $head-foot-color; 
 }
 
+/*------------------------------------------------------------------------------
+    PROJECTS BLADE STYLING
+------------------------------------------------------------------------------*/
+
 .projects-container {
     @extend .login-container;
     max-width: 100%;
@@ -242,16 +252,18 @@ main {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    // justify-content: space-between;
     align-content: center;
     border-bottom: 1px solid $border-color;
     padding: 0.5rem 0;
-    font-weight: 700;
 }
 
 .project-column, .client-column {
     width: 100%;
     margin-bottom: 1rem;
+}
+
+.project-column {
+    font-weight: 700;
 }
 
 .edit-column {
@@ -273,18 +285,18 @@ main {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     margin-top: 2rem;
 }
 
 .task-card {
-    @extend .login-container;
+    @extend .login-container;  
+    max-width: 20rem;  
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-
+    margin: 0 0 0.8rem 0;
     .task-meta {
         font-size:0.8rem;
-        // margin-top: 0;
     }
 }
 

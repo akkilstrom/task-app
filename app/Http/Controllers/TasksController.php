@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 use App\Task;
 use App\Project;
 
+use Log;
+
 class TasksController extends Controller {
     public function __construct() {
-        // you must be signed in to create & store a post. 
-        $this->middleware('auth');
+        // you must be signed in to create & store a task. 
+        $this->middleware('auth')->except(['update']);
         // ->except(['index', 'show']);Guests can see the posts
     }
 
@@ -54,7 +56,6 @@ class TasksController extends Controller {
             'project_id'        => 'required',
             'status'            => 'required',
             // 'level_of_effort'   => 'required',
-            //ADD ALL THE INPUTS THAT SHALL BE REQUIRED
         ]);
 
         // Calls a method on your authenticated user object & publish a new... 
@@ -78,7 +79,7 @@ class TasksController extends Controller {
 
     public function edit(Task $task) {
         $selectedProject = Project::find($task->project_id);
-        $allProject = Project::All();
+        $allProjects = Project::All();
 
         return view( 'tasks.edit', [
             'task'              => $task,
@@ -86,32 +87,34 @@ class TasksController extends Controller {
             'allProjects'       => $allProjects
         ]);
     }
-
     
     public function update(Request $request, $id) {
         $this->validate($request, [
-            'task'              => 'required',
-            'description'       => 'required',
-            'importance'        => 'required',
-            'deadline'          => 'required',
-            'project_id'        => 'required',
-            'status'            => 'required',
-            'level_of_effort'   => 'required'
+        //     'task'              => 'required',
+        //     'description'       => 'required',
+        //     'importance'        => 'required',
+        //     'deadline'          => 'required',
+        //     'project_id'        => 'required',
+                'status'            => 'required',
+        //     'level_of_effort'   => 'required'
         ]);
+
+        Log::info(print_r($id, true));
+        Log::info(print_r($request->input('status'), true));
 
         $task = Task::find($id);
 
         $task->update([
-            'task'              => $request->input('task'),
-            'description'       => $request->input('description'),
-            'importance'        => $request->input('importance'),
-            'deadline'          => $request->input('deadline'),
-            'project_id'        => $request->input('project_id'),
-            'status'            => $request->input('status'),
-            'level_of_effort'   => $request->input('level_of_effort')
+            // 'task'              => $request->input('task'),
+            // 'description'       => $request->input('description'),
+            // 'importance'        => $request->input('importance'),
+            // 'deadline'          => $request->input('deadline'),
+            // 'project_id'        => $request->input('project_id'),
+            'status'                => $request->input('status')
         ]);
 
-        return redirect( '/tasks' );
+        // return redirect( '/tasks' );
+        return 'uppdaterad';
     }
 
     // Function to delete task
