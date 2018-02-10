@@ -18,7 +18,7 @@
         <header>
             <div class="header-content">
                 <div class="logo-container">
-                    <h1 class="logo">The Taskboard</h1>
+                    <p class="logo">The Taskboard</p>
                 </div>
 
                 @guest
